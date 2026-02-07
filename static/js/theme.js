@@ -85,11 +85,12 @@ function toggleTheme() {
     wrapper.classList.add('crt-on');
     setTimeout(() => wrapper.classList.remove('crt-on'), 600);
   } else {
-    // CRT turn-off effect
+    // CRT turn-off effect (shorter on mobile to match CSS override)
+    const offDuration = window.matchMedia('(max-width: 768px)').matches ? 250 : 350;
     wrapper.classList.add('crt-off');
     setTimeout(() => {
       wrapper.classList.remove('crt-off');
-    }, 350);
+    }, offDuration);
   }
 
   html.setAttribute('data-theme', next);
