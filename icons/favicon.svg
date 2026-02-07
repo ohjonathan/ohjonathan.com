@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="92" fill="#0a0a0a"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800');
+    .oh { font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 260px; fill: #ffffff; }
+  </style>
+  <text class="oh" x="64" y="370">Oh</text>
+  <rect x="370" y="318" width="52" height="52" rx="10" fill="#2563eb"/>
+</svg>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}" data-theme="editorial">
+<html lang="{{ .Site.LanguageCode | default " en-us" }}" data-theme="editorial">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,89 +10,105 @@
   <meta property="og:url" content="{{ .Site.BaseURL }}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
-  {{ with .Site.Params.ogimage }}<meta property="og:image" content="{{ . | absURL }}" />{{ end }}
+  {{ with .Site.Params.ogimage }}
+  <meta property="og:image" content="{{ . | absURL }}" />{{ end }}
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="{{ " css/custom.css" | relURL }}">
   {{ partial "analytics.html" . }}
 </head>
+
 <body>
 
-<canvas id="matrix-canvas"></canvas>
+  <canvas id="matrix-canvas"></canvas>
 
-<div class="page-wrapper">
+  <div class="page-wrapper">
 
-{{ partial "nav.html" . }}
+    {{ partial "nav.html" . }}
 
-<div class="main-content">
+    <div class="main-content">
 
-  <section class="hero">
-    <div class="terminal-badge">
-      <span class="terminal-prompt">$</span>
-      <span class="typing-text">hello, world</span>
-    </div>
-    <h1>Builder by default.<br>Consultant by training.<br><span class="tagline-accent">Using AI as a reason to redesign systems, not just automate them.</span></h1>
-    <p class="hero-sub">I build AI-powered products that solve real operational problems — from enterprise GenAI platforms at McKinsey to open-source developer tools. Based in San Francisco.</p>
-    <div class="hero-meta">
-      <a href="https://github.com/{{ .Site.Params.github }}">{{ partial "icons/github.html" . }}GitHub</a>
-      <span class="separator-dot">·</span><span class="separator-pipe">|</span>
-      <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}">{{ partial "icons/linkedin.html" . }}LinkedIn</a>
-      <span class="separator-dot">·</span><span class="separator-pipe">|</span>
-      <a href="mailto:{{ .Site.Params.email }}">{{ partial "icons/email.html" . }}Email</a>
-    </div>
-  </section>
+      <section class="hero">
+        <div class="terminal-badge">
+          <span class="terminal-prompt">$</span>
+          <span class="typing-text">hello, world</span>
+        </div>
+        <h1>Builder by default.<br>Consultant by training.<br><span class="tagline-accent">Using AI as a reason to
+            redesign systems, not just automate them.</span></h1>
+        <p class="hero-sub">I build AI-powered products that solve real operational problems — from enterprise GenAI
+          platforms at McKinsey to open-source developer tools. Based in San Francisco.</p>
+        <div class="hero-meta">
+          <a href="https://github.com/{{ .Site.Params.github }}">{{ partial "icons/github.html" . }}GitHub</a>
+          <span class="separator-dot">·</span><span class="separator-pipe">|</span>
+          <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}">{{ partial "icons/linkedin.html" .
+            }}LinkedIn</a>
+          <span class="separator-dot">·</span><span class="separator-pipe">|</span>
+          <a href="mailto:{{ .Site.Params.email }}">{{ partial "icons/email.html" . }}Email</a>
+        </div>
+      </section>
 
-  <section class="section experience-strip">
-    <div class="section-header">
-      <h2>Background</h2>
-    </div>
-    <p class="strip-content">
-      <strong>Engagement Manager at McKinsey Technology</strong>, where I've led GenAI implementations, enterprise transformations, and stood up new governing bodies across industries from steel manufacturing to federal agencies. Before that, four years at the <strong>Massachusetts Department of Revenue</strong> building data infrastructure for $30B tax revenue operations. Two degrees from <strong>Bentley University</strong>, both earned while working full-time.
-    </p>
-    <a href="/about/" class="resume-link">Full story and resume</a>
-  </section>
+      <section class="section experience-strip">
+        <div class="section-header">
+          <h2>Background</h2>
+        </div>
+        <p class="strip-content">
+          <strong>Engagement Manager at McKinsey Technology</strong>, where I've led GenAI implementations, enterprise
+          transformations, and stood up new governing bodies across industries from steel manufacturing to federal
+          agencies. Before that, four years at the <strong>Massachusetts Department of Revenue</strong> building data
+          infrastructure for $30B tax revenue operations. Two degrees from <strong>Bentley University</strong>, both
+          earned while working full-time.
+        </p>
+        <a href="/about/" class="resume-link">Full story and resume</a>
+      </section>
 
-  <section class="section projects-section">
-    <div class="section-header">
-      <h2>Projects</h2>
-      <a href="/projects/">View all →</a>
-    </div>
-    {{ range .Site.Data.projects }}
-    <a href="/projects/{{ .slug }}/" class="project-card">
-      <div class="card-top">
-        <h3>{{ .title }}</h3>
-        <span class="card-tag">{{ .tag }}</span>
-      </div>
-      <p class="card-philosophy">"{{ .philosophy }}"</p>
-      <p class="card-description">{{ .description }}</p>
-      <div class="card-bottom">
-        {{ range .meta }}
-        <span>{{ . }}</span>
+      <section class="section projects-section">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <a href="/projects/">View all →</a>
+        </div>
+        {{ range .Site.Data.projects }}
+        <a href="/projects/{{ .slug }}/" class="project-card">
+          <div class="card-top">
+            <h3>{{ .title }}</h3>
+            <span class="card-tag">{{ .tag }}</span>
+          </div>
+          <p class="card-philosophy">"{{ .philosophy }}"</p>
+          <p class="card-description">{{ .description }}</p>
+          <div class="card-bottom">
+            {{ range .meta }}
+            <span>{{ . }}</span>
+            {{ end }}
+          </div>
+        </a>
         {{ end }}
-      </div>
-    </a>
-    {{ end }}
-  </section>
+      </section>
 
-  <section class="section writing-section">
-    <div class="section-header">
-      <h2>Writing</h2>
-      <a href="/posts/">All posts →</a>
-    </div>
-    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
-    <a href="{{ .Permalink }}" class="post-item">
-      <span class="post-title">{{ .Title }}</span>
-      <span class="post-date">{{ .Date.Format "Jan 2006" }}</span>
-    </a>
-    {{ end }}
-  </section>
+      <section class="section writing-section">
+        <div class="section-header">
+          <h2>Writing</h2>
+          <a href="/posts/">All posts →</a>
+        </div>
+        {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+        <a href="{{ .Permalink }}" class="post-item">
+          <span class="post-title">{{ .Title }}</span>
+          <span class="post-date">{{ .Date.Format "Jan 2006" }}</span>
+        </a>
+        {{ end }}
+      </section>
 
-</div><!-- .main-content -->
+    </div><!-- .main-content -->
 
-{{ partial "footer.html" . }}
+    {{ partial "footer.html" . }}
 
-</div><!-- .page-wrapper -->
+  </div><!-- .page-wrapper -->
 
-<script src="{{ "js/theme.js" | relURL }}"></script>
+  <script src="{{ " js/theme.js" | relURL }}"></script>
 
 </body>
+
 </html>
