@@ -428,7 +428,7 @@ body {
 
 @keyframes typing {
   from { max-width: 0; border-right-color: var(--accent); }
-  to { max-width: 12ch; border-right-color: var(--accent); }
+  to { max-width: 13ch; border-right-color: var(--accent); }
 }
 
 @keyframes blink-caret {
