@@ -216,11 +216,11 @@ body {
 }
 
 .crt-on {
-  animation: crt-on 0.6s ease-out forwards;
+  animation: crt-on 0.35s ease-out forwards;
 }
 
 .crt-off {
-  animation: crt-off 0.3s ease-in forwards;
+  animation: crt-off 0.2s ease-in forwards;
 }
 
 /* Mobile: softer turn-off (fade only, no scale collapse) */
@@ -243,7 +243,7 @@ body {
   }
 
   .crt-off {
-    animation: crt-off-mobile 0.25s ease-in forwards;
+    animation: crt-off-mobile 0.15s ease-in forwards;
   }
 }
 
@@ -546,19 +546,24 @@ body {
    TERMINAL BADGE ("$ hello, world" typing)
    ============================================ */
 .terminal-badge {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
   font-family: var(--mono);
   font-size: 0.78rem;
   color: var(--accent);
   margin-bottom: 1.5rem;
   width: fit-content;
   overflow: hidden;
+  height: 1.2em;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 [data-theme="terminal"] .terminal-badge {
-  display: flex;
-  align-items: center;
-  gap: 0;
+  visibility: visible;
+  opacity: 1;
 }
 
 .terminal-prompt {

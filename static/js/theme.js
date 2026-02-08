@@ -1,7 +1,7 @@
 // ============================================
 // THEME PERSISTENCE (runs immediately)
 // ============================================
-(function() {
+(function () {
   const saved = localStorage.getItem('theme');
   if (saved) {
     document.documentElement.setAttribute('data-theme', saved);
@@ -83,10 +83,10 @@ function toggleTheme() {
     // CRT turn-on effect
     wrapper.classList.remove('crt-off');
     wrapper.classList.add('crt-on');
-    setTimeout(() => wrapper.classList.remove('crt-on'), 600);
+    setTimeout(() => wrapper.classList.remove('crt-on'), 350);
   } else {
     // CRT turn-off effect (shorter on mobile to match CSS override)
-    const offDuration = window.matchMedia('(max-width: 768px)').matches ? 250 : 350;
+    const offDuration = window.matchMedia('(max-width: 768px)').matches ? 150 : 200;
     wrapper.classList.add('crt-off');
     setTimeout(() => {
       wrapper.classList.remove('crt-off');
@@ -103,7 +103,7 @@ function toggleTheme() {
 }
 
 // Keyboard support for toggle
-document.querySelector('.theme-toggle').addEventListener('keydown', function(e) {
+document.querySelector('.theme-toggle').addEventListener('keydown', function (e) {
   if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
     toggleTheme();
