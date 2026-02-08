@@ -309,9 +309,10 @@ body {
 }
 
 .logo-dot {
+  display: block;
   position: absolute;
-  bottom: 26%;
-  right: 14%;
+  bottom: 8px;
+  right: 5px;
   width: 4px;
   height: 4px;
   background: #2563eb;
