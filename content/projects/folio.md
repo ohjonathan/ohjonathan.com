@@ -3,7 +3,7 @@ title: "Folio"
 date: 2025-06-01
 description: "CLI tool that transforms consulting deliverables into a searchable, AI-native knowledge library."
 tag: "Personal"
-philosophy: "Billions of dollars of consulting output dies the moment the engagement ends."
+philosophy: "Your past work should be searchable, not buried in a folder."
 meta:
   - "Python · Click CLI"
   - "Claude API"

@@ -22,7 +22,7 @@
 - title: "Folio"
   slug: "folio"
   tag: "Personal"
-  philosophy: "Billions of dollars of consulting output dies the moment the engagement ends."
+  philosophy: "Your past work should be searchable, not buried in a folder."
   description: "CLI tool that transforms PowerPoint and PDF deliverables into a searchable, AI-native knowledge library. Converts decks into markdown with LLM analysis and version tracking."
   meta:
     - "Python · Click CLI"
