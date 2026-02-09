@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>http://localhost:64295/tags/ai/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cli/</loc>
+    <loc>http://localhost:64295/tags/cli/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/consulting/</loc>
+    <loc>http://localhost:64295/tags/consulting/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/folio/</loc>
+    <loc>http://localhost:64295/projects/folio/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:64295/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>http://localhost:64295/projects/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>http://localhost:64295/tags/python/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:64295/tags/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/genai-platform/</loc>
+    <loc>http://localhost:64295/projects/genai-platform/</loc>
     <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/genai/</loc>
+    <loc>http://localhost:64295/tags/genai/</loc>
     <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mckinsey/</loc>
+    <loc>http://localhost:64295/tags/mckinsey/</loc>
     <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/product/</loc>
+    <loc>http://localhost:64295/tags/product/</loc>
     <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/context-management/</loc>
+    <loc>http://localhost:64295/tags/context-management/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/ontos/</loc>
+    <loc>http://localhost:64295/projects/ontos/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:64295/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:64295/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/resume/</loc>
+    <loc>http://localhost:64295/resume/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:64295/posts/</loc>
   </url>
 </urlset>

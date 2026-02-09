@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Product on Jonathan Oh</title>
-    <link>http://localhost:1313/tags/product/</link>
+    <link>http://localhost:64295/tags/product/</link>
     <description>Recent content in Product on Jonathan Oh</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/product/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:64295/tags/product/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enterprise GenAI Knowledge Platform</title>
-      <link>http://localhost:1313/projects/genai-platform/</link>
+      <link>http://localhost:64295/projects/genai-platform/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/genai-platform/</guid>
+      <guid>http://localhost:64295/projects/genai-platform/</guid>
       <description>&lt;p&gt;As the founding Engagement Manager, I led the build and deployment of a GenAI-powered knowledge platform across three client sites. The system transformed static consulting deliverables into living, queryable intelligence — giving client teams the ability to surface insights from thousands of pages of prior work in seconds.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;Every consulting engagement produces hundreds of slides, memos, and analyses. The moment the team rolls off, that knowledge becomes inaccessible. Buried in SharePoint folders, forgotten in email threads, or locked in the heads of people who&amp;rsquo;ve moved on.&lt;/p&gt;</description>
     </item>
   </channel>
