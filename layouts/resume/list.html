@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article class="resume-page">
+  <header class="resume-header">
+    <div class="resume-header-top">
+      <div>
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{ with .Description }}
+        <p class="page-description">{{ . }}</p>
+        {{ end }}
+      </div>
+      <div class="resume-actions">
+        <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" class="resume-link-clean" target="_blank"
+          rel="noopener">{{ partial "icons/linkedin.html" . }}LinkedIn</a>
+        <a href="/resume/Jonathan_Oh_Resume.pdf" class="resume-download" download>Download PDF ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="resume-body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

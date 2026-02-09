@@ -23,6 +23,11 @@ theme = "paper"
     url = "/about/"
     weight = 10
   [[menu.main]]
+    identifier = "resume"
+    name = "Resume"
+    url = "/resume/"
+    weight = 15
+  [[menu.main]]
     identifier = "projects"
     name = "Projects"
     url = "/projects/"
