@@ -1,6 +1,5 @@
 ---
 title: "About"
-description: "Builder by default. Consultant by training."
+type: "about"
+description: "I'm Johnny. I build things that make systems honest."
 ---
-
-More coming soon.

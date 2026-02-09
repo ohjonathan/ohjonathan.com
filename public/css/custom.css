@@ -1259,6 +1259,210 @@ body {
   margin: 1.5em 0;
 }
 
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+/* Hero grid: photo left, intro right */
+.about-hero {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.about-hero .about-photo-wrapper {
+  margin: 0;
+  text-align: center;
+}
+
+.about-photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--card-radius);
+  border: 1px var(--border-style) var(--border);
+}
+
+[data-theme="terminal"] .about-photo {
+  box-shadow: 0 0 20px rgba(60, 236, 106, 0.06);
+}
+
+.about-intro {
+  padding-top: 0.25rem;
+}
+
+.about-tagline {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 1.25rem 0;
+}
+
+.about-tagline .tagline-accent {
+  color: var(--accent);
+  transition: color 0.4s, text-shadow 0.4s;
+}
+
+[data-theme="terminal"] .about-tagline .tagline-accent {
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.about-intro-text {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+[data-theme="terminal"] .about-intro-text {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+}
+
+/* Terminal badge for about page */
+.about-page .terminal-badge {
+  margin-bottom: 1.75rem;
+}
+
+/* Typing animation scoped for "whoami" (6 chars) */
+[data-theme="terminal"] .about-typing {
+  animation: typing-whoami 0.8s steps(6) 0.6s forwards, blink-caret 0.8s step-end 0.6s infinite;
+}
+
+@keyframes typing-whoami {
+  from {
+    max-width: 0;
+    border-right-color: var(--accent);
+  }
+  to {
+    max-width: 7ch;
+    border-right-color: var(--accent);
+  }
+}
+
+/* Section rhythm */
+.about-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-section .section-header {
+  margin-bottom: 1.25rem;
+}
+
+/* Pull quote callout */
+.about-callout {
+  background: var(--bg-card);
+  border: var(--card-border-width) var(--border-style) var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--card-radius);
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 1.5rem 0;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.5;
+  transition: all 0.4s;
+}
+
+[data-theme="terminal"] .about-callout {
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  box-shadow: 0 0 20px rgba(60, 236, 106, 0.04);
+}
+
+/* Tag badges row */
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-tags .card-tag {
+  margin-left: 0;
+}
+
+/* Milestone highlights */
+.about-page .page-content strong {
+  color: var(--text);
+  font-weight: 600;
+  transition: color 0.4s;
+}
+
+[data-theme="terminal"] .about-page .page-content strong {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* CTA line */
+.about-cta {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+[data-theme="terminal"] .about-cta {
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* Footer links row */
+.about-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.about-links a {
+  font-family: var(--font-meta);
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+  letter-spacing: 0.02em;
+}
+
+.about-links a:hover {
+  color: var(--accent);
+}
+
+[data-theme="terminal"] .about-links a:hover {
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.about-links .separator-dot,
+.about-links .separator-pipe {
+  color: var(--border);
+  font-size: 0.75rem;
+}
+
+/* Mobile: stack hero grid */
+@media (max-width: 600px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-hero .about-photo {
+    max-width: 280px;
+  }
+
+  .about-tagline {
+    font-size: 1.3rem;
+  }
+
+  .about-links {
+    gap: 0.75rem;
+  }
+}
+
 /* Post navigation (prev/next) */
 .post-nav {
   display: flex;
