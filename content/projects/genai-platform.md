@@ -9,7 +9,6 @@ meta:
   - "3 deployments"
   - "→ Dedicated team of 5+ PMs"
 tags: ["ai", "genai", "product", "mckinsey"]
-draft: false
 ---
 
 As the founding Engagement Manager, I led the build and deployment of a GenAI-powered knowledge platform across three client sites. The system transformed static consulting deliverables into living, queryable intelligence — giving client teams the ability to surface insights from thousands of pages of prior work in seconds.

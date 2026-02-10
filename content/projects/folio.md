@@ -9,7 +9,6 @@ meta:
   - "Claude API"
   - "Obsidian-compatible"
 tags: ["ai", "consulting", "python", "cli"]
-draft: false
 ---
 
 Folio is a command-line tool that converts PowerPoint decks and PDF documents into a searchable, AI-native knowledge library.
