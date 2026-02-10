@@ -10,7 +10,7 @@ meta:
   - "500+ commits"
   - "Apache 2.0"
 tags: ["ai", "context-management", "python", "cli"]
-draft: false
+draft: true
 ---
 
 Ontos is a local-first AI context management system. It provides a repo-native knowledge graph built in markdown and YAML, designed for inspectable, repeatable workflows across AI tools.

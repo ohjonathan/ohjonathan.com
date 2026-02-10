@@ -1,26 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cli on Jonathan Oh</title>
-    <link>https://johnnyoh.xyz/tags/cli/</link>
-    <description>Recent content in Cli on Jonathan Oh</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://johnnyoh.xyz/tags/cli/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Folio</title>
-      <link>https://johnnyoh.xyz/projects/folio/</link>
-      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://johnnyoh.xyz/projects/folio/</guid>
-      <description>&lt;p&gt;Folio is a command-line tool that converts PowerPoint decks and PDF documents into a searchable, AI-native knowledge library.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;Consulting firms produce billions of dollars worth of strategic analysis every year. Almost all of it dies the moment the engagement ends. Decks get filed away. Insights get locked in formats that resist search, synthesis, and reuse.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-folio-does&#34;&gt;What Folio Does&lt;/h2&gt;&#xA;&lt;p&gt;Point Folio at a folder of &lt;code&gt;.pptx&lt;/code&gt; and &lt;code&gt;.pdf&lt;/code&gt; files. It extracts content, runs each through Claude for structured analysis, and outputs clean Markdown files with metadata, key findings, and cross-references. The output is Obsidian-compatible, so you get a linked knowledge graph for free.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Project Ontos</title>
-      <link>https://johnnyoh.xyz/projects/ontos/</link>
-      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://johnnyoh.xyz/projects/ontos/</guid>
-      <description>&lt;p&gt;Ontos is a local-first AI context management system. It provides a repo-native knowledge graph built in markdown and YAML, designed for inspectable, repeatable workflows across AI tools.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;Most AI context solutions treat knowledge as something to be retrieved — embedded, indexed, and searched through opaque vector databases. This makes AI workflows fragile, non-reproducible, and impossible to inspect. You can&amp;rsquo;t see what the model &amp;ldquo;knows,&amp;rdquo; and you can&amp;rsquo;t verify its reasoning chain.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cli on Jonathan Oh</title><link>https://ohjonathan.com/tags/cli/</link><description>Recent content in Cli on Jonathan Oh</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 01 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ohjonathan.com/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Folio</title><link>https://ohjonathan.com/projects/folio/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><guid>https://ohjonathan.com/projects/folio/</guid><description>&lt;p&gt;Folio is a command-line tool that converts PowerPoint decks and PDF documents into a searchable, AI-native knowledge library.&lt;/p&gt;
+&lt;h2 id="the-problem"&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;Consulting firms produce billions of dollars worth of strategic analysis every year. Almost all of it dies the moment the engagement ends. Decks get filed away. Insights get locked in formats that resist search, synthesis, and reuse.&lt;/p&gt;
+&lt;h2 id="what-folio-does"&gt;What Folio Does&lt;/h2&gt;
+&lt;p&gt;Point Folio at a folder of &lt;code&gt;.pptx&lt;/code&gt; and &lt;code&gt;.pdf&lt;/code&gt; files. It extracts content, runs each through Claude for structured analysis, and outputs clean Markdown files with metadata, key findings, and cross-references. The output is Obsidian-compatible, so you get a linked knowledge graph for free.&lt;/p&gt;</description></item></channel></rss>

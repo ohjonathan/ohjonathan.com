@@ -26,8 +26,8 @@
       <div class="punchline">same instinct. increasing scale.</div>
       <div class="stats-grid">
         <div class="stat-cell"><div class="stat-number">$30B</div><div class="stat-label">Tax Revenue Ops</div></div>
-        <div class="stat-cell"><div class="stat-number">8</div><div class="stat-label">Engagements</div></div>
-        <div class="stat-cell"><div class="stat-number">6</div><div class="stat-label">Industries</div></div>
+        <div class="stat-cell"><div class="stat-number">30+</div><div class="stat-label">Engagements</div></div>
+        <div class="stat-cell"><div class="stat-number">5+</div><div class="stat-label">Industries</div></div>
         <div class="stat-cell"><div class="stat-number">40–50</div><div class="stat-label">Person Team</div></div>
         <div class="stat-cell"><div class="stat-number">500+</div><div class="stat-label">Commits</div></div>
         <div class="stat-cell"><div class="stat-number">3</div><div class="stat-label">Continents</div></div>
@@ -213,23 +213,18 @@
     function syncTerminalCtaState() {
       var theme = document.documentElement.getAttribute('data-theme');
       var isTerminal = theme === 'terminal';
-      terminalCta.disabled = isTerminal;
       terminalCta.textContent = isTerminal ? 'Already unplugged' : 'Knock, knock…';
-      terminalCta.setAttribute('aria-disabled', isTerminal ? 'true' : 'false');
     }
 
     terminalCta.addEventListener('click', function () {
-      if (document.documentElement.getAttribute('data-theme') === 'terminal') {
-        syncTerminalCtaState();
-        return;
-      }
-
       if (typeof window.toggleTheme === 'function') {
         window.toggleTheme();
       } else {
-        document.documentElement.setAttribute('data-theme', 'terminal');
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'terminal' ? 'editorial' : 'terminal';
+        document.documentElement.setAttribute('data-theme', next);
         try {
-          localStorage.setItem('theme', 'terminal');
+          localStorage.setItem('theme', next);
         } catch (e) {
           // no-op if storage is unavailable
         }
