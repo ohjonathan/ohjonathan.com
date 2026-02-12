@@ -128,6 +128,24 @@ body {
 }
 
 /* ============================================
+   SCROLL PROGRESS BAR
+   ============================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 9999;
+  width: 0%;
+  pointer-events: none;
+}
+
+[data-theme="terminal"] .scroll-progress {
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* ============================================
    CRT EFFECTS (terminal only)
    ============================================ */
 
@@ -755,9 +773,11 @@ body {
   margin-bottom: 1rem;
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s;
+  transition: all 0.3s ease, transform 0.2s ease;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .project-card:hover {
@@ -932,11 +952,21 @@ body {
 }
 
 /* Theme-based show/hide for stat images */
-.github-stats-terminal { display: none; }
-.github-stats-editorial { display: inline; }
+.github-stats-terminal {
+  display: none;
+}
 
-[data-theme="terminal"] .github-stats-terminal { display: inline; }
-[data-theme="terminal"] .github-stats-editorial { display: none; }
+.github-stats-editorial {
+  display: inline;
+}
+
+[data-theme="terminal"] .github-stats-terminal {
+  display: inline;
+}
+
+[data-theme="terminal"] .github-stats-editorial {
+  display: none;
+}
 
 .github-stats-note {
   margin-top: 1.25rem;
@@ -1884,8 +1914,9 @@ body {
   top: 0.1rem;
   bottom: 0.1rem;
   width: var(--timeline-track-width);
-  background: linear-gradient(to bottom, var(--timeline-track-top) 0%, var(--timeline-track-mid) 50%, var(--timeline-track-top) 100%);
+  background: linear-gradient(to bottom, var(--timeline-track-top) 0%, var(--timeline-track-mid) 50%, var(--bg) 100%);
   border-radius: 999px;
+  z-index: 0;
 }
 
 .about-page-v2 .timeline-entry {
@@ -1901,7 +1932,7 @@ body {
 .about-page-v2 .timeline-entry::before {
   content: '';
   position: absolute;
-  left: -2.8rem;
+  left: calc(-2.5rem - 6.5px);
   top: 0.4rem;
   width: 12px;
   height: 12px;
@@ -2508,4 +2539,59 @@ body {
 .github-stats {
   transition: background 0.5s ease, color 0.4s ease, border-color 0.4s ease,
     box-shadow 0.4s ease, order 0s;
+}
+
+/* ============================================
+   HOMEPAGE SECTION REVEALS
+   ============================================ */
+.main-content>.section,
+.main-content>.experience-strip {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease,
+    background 0.5s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.main-content>.section.visible,
+.main-content>.experience-strip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* ============================================
+   INTERACTIVE TIMELINE (about page)
+   ============================================ */
+@keyframes timeline-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--accent-glow);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+.about-page-v2 .timeline-entry .timeline-cmd,
+.about-page-v2 .timeline-entry .timeline-year,
+.about-page-v2 .timeline-entry .timeline-text {
+  opacity: 0.4;
+  transition: opacity 0.6s ease;
+}
+
+.about-page-v2 .timeline-entry.active .timeline-cmd,
+.about-page-v2 .timeline-entry.active .timeline-year,
+.about-page-v2 .timeline-entry.active .timeline-text {
+  opacity: 1;
+}
+
+.about-page-v2 .timeline-entry.active::before {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 8px 2px var(--accent-glow);
+  animation: timeline-pulse 2s ease-in-out infinite;
 }

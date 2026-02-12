@@ -109,3 +109,124 @@ document.querySelector('.theme-toggle').addEventListener('keydown', function (e)
     toggleTheme();
   }
 });
+
+// ============================================
+// SCROLL PROGRESS BAR
+// ============================================
+(function () {
+  var bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  document.body.prepend(bar);
+  window.addEventListener('scroll', function () {
+    var pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+    bar.style.width = Math.min(pct, 100) + '%';
+  }, { passive: true });
+})();
+
+// ============================================
+// PROJECT CARD 3D TILT ON HOVER
+// ============================================
+(function () {
+  document.querySelectorAll('.project-card').forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var rect = card.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = 'perspective(800px) rotateY(' + (x * 4) + 'deg) rotateX(' + (-y * 4) + 'deg)';
+    });
+    card.addEventListener('mouseleave', function () {
+      card.style.transform = '';
+    });
+  });
+})();
+
+// ============================================
+// HOMEPAGE STAGGERED SECTION REVEALS
+// ============================================
+(function () {
+  var mainContent = document.querySelector('.main-content');
+  if (!mainContent) return;
+
+  var sections = mainContent.querySelectorAll('.section, .experience-strip');
+  if (sections.length === 0) return;
+
+  var revealObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  sections.forEach(function (s) {
+    revealObs.observe(s);
+  });
+})();
+
+
+
+
+// ============================================
+// ANIMATED STAT COUNTERS
+// ============================================
+(function () {
+  var statNumbers = document.querySelectorAll('.stat-number');
+  if (statNumbers.length === 0) return;
+
+  function animateCount(el) {
+    var raw = el.textContent.trim();
+    var numMatch = raw.match(/(\d+)/);
+    if (!numMatch) return;
+    var target = parseInt(numMatch[1], 10);
+    var prefix = raw.slice(0, raw.indexOf(numMatch[0]));
+    var suffix = raw.slice(raw.indexOf(numMatch[0]) + numMatch[0].length);
+    var duration = 1200;
+    var start = performance.now();
+
+    function tick(now) {
+      var t = Math.min((now - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - t, 3);
+      el.textContent = prefix + Math.round(target * ease) + suffix;
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    el.textContent = prefix + '0' + suffix;
+    requestAnimationFrame(tick);
+  }
+
+  var counterObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var cells = entry.target.querySelectorAll('.stat-number');
+        cells.forEach(function (cell, idx) {
+          setTimeout(function () { animateCount(cell); }, idx * 100);
+        });
+        counterObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.stats-grid').forEach(function (grid) {
+    counterObs.observe(grid);
+  });
+})();
+
+
+
+
+// ============================================
+// INTERACTIVE TIMELINE (about page)
+// ============================================
+(function () {
+  var entries = document.querySelectorAll('.timeline-entry');
+  if (entries.length === 0) return;
+
+  var timelineObs = new IntersectionObserver(function (observed) {
+    observed.forEach(function (entry) {
+      entry.target.classList.toggle('active', entry.isIntersecting);
+    });
+  }, { threshold: 0.5, rootMargin: '-20% 0px' });
+
+  entries.forEach(function (e) {
+    timelineObs.observe(e);
+  });
+})();
