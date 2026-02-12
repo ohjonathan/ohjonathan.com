@@ -28,7 +28,7 @@ Led data infrastructure and executive analytics for $30B tax revenue operations;
 
 - Turned billions of dollars of static consulting deliverables into a living, AI-powered knowledge system; built and deployed the platform across 3 client sites (semiconductor, HVAC, steel) as sole business lead from inception
 - Drove end-to-end implementation at each client site, redesigning how teams surface, synthesize, and build on prior strategic work — from knowledge graph architecture to executive rollout
-- Scaled from founding team to 40–50 person cross-region operation (US, Europe, India); owned product direction and governance; transitioned platform to a dedicated team of 5+ PMs and multiple consultants for continued development
+- Scaled from founding team to 40–50 person cross-region operation (US, Europe, Asia); owned product direction and governance; transitioned platform to a dedicated team of 5+ PMs and multiple consultants for continued development
 
 ### Project Ontos
 **Creator, AI Context Management System**
