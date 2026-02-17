@@ -18,6 +18,11 @@ I wanted to test this for myself. So I made a one-minute cinematic history of Ch
 
 As a history nerd, I've always appreciated historically accurate media. Band of Brothers, Ken Burns documentaries, that kind of thing. There's something about seeing history rendered with care and precision that makes it feel real in a way that reading about it doesn't.
 
+But beyond the history, I just love how Chicago looks. The lakefront, the parks, the way the skyline rises right out of the green — there's a weight to it that most cities don't have. It feels like a city that was built with intention.
+
+![Aerial view of Chicago's lakefront and skyline](/images/posts/seven-dollars/chicago-aerial.jpg)
+*The best city in the world = Chicago in May. Taken from McKinsey & Company's Chicago office.*
+
 I've always wanted to see a cinematic aerial timelapse of Chicago evolving from prairie wetlands to a modern skyline. The kind of shot that would open a high-budget documentary. But I'm not a filmmaker. I don't have a VFX team. I've never touched After Effects.
 
 What I do have is a clear picture of what I wanted to see.
