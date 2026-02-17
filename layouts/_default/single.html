@@ -19,7 +19,7 @@
   {{ $content := .Content }}
   {{ $tocEnabled := ne .Params.toc false }}
   {{ $tocContent := .TableOfContents }}
-  {{ $tocItemsCount := len (findRE "(?i)<li>" $tocContent) }}
+  {{ $tocItemsCount := len (findRE "(?i)<li\\b[^>]*>" $tocContent) }}
     {{ $showTOC := and $tocEnabled (ge $tocItemsCount 3) }}
 
     {{ if $showTOC }}
