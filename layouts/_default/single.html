@@ -18,18 +18,19 @@
 
   {{ $content := .Content }}
   {{ $tocEnabled := ne .Params.toc false }}
-  {{ $h2Count := len (findRE "(?i)<h2\\b[^>]*>" $content) }}
-    {{ $showTOC := and $tocEnabled (ge $h2Count 3) }}
+  {{ $tocContent := .TableOfContents }}
+  {{ $tocItemsCount := len (findRE "(?i)<li>" $tocContent) }}
+    {{ $showTOC := and $tocEnabled (ge $tocItemsCount 3) }}
 
     {{ if $showTOC }}
     <details class="page-toc">
       <summary class="page-toc-summary">On this page</summary>
-      <div class="page-toc-body">{{ .TableOfContents }}</div>
+      <div class="page-toc-body">{{ $tocContent }}</div>
     </details>
     {{ end }}
 
     <div class="page-content">
-      {{ $content | safeHTML }}
+      {{ $content }}
     </div>
     {{ if eq .Section "posts" }}
     <nav class="post-nav">
