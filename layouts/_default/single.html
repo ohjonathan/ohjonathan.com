@@ -15,18 +15,31 @@
     </div>
     {{ end }}
   </header>
-  <div class="page-content">
-    {{ .Content }}
-  </div>
-  {{ if eq .Section "posts" }}
-  <nav class="post-nav">
-    {{ with .PrevInSection }}
-    <a href="{{ .Permalink }}" class="post-nav-link prev">← {{ .Title }}</a>
+
+  {{ $content := .Content }}
+  {{ $tocEnabled := ne .Params.toc false }}
+  {{ $h2Count := len (findRE "(?i)<h2\\b[^>]*>" $content) }}
+    {{ $showTOC := and $tocEnabled (ge $h2Count 3) }}
+
+    {{ if $showTOC }}
+    <details class="page-toc">
+      <summary class="page-toc-summary">On this page</summary>
+      <div class="page-toc-body">{{ .TableOfContents }}</div>
+    </details>
     {{ end }}
-    {{ with .NextInSection }}
-    <a href="{{ .Permalink }}" class="post-nav-link next">{{ .Title }} →</a>
+
+    <div class="page-content">
+      {{ $content | safeHTML }}
+    </div>
+    {{ if eq .Section "posts" }}
+    <nav class="post-nav">
+      {{ with .PrevInSection }}
+      <a href="{{ .Permalink }}" class="post-nav-link prev">← {{ .Title }}</a>
+      {{ end }}
+      {{ with .NextInSection }}
+      <a href="{{ .Permalink }}" class="post-nav-link next">{{ .Title }} →</a>
+      {{ end }}
+    </nav>
     {{ end }}
-  </nav>
-  {{ end }}
 </article>
 {{ end }}

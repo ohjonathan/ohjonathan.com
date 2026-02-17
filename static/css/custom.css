@@ -1244,11 +1244,74 @@ body {
 }
 
 /* Article content */
+.page-toc {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px var(--border-style) var(--border);
+  border-radius: var(--card-radius);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}
+
+.page-toc-summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  outline: none;
+  transition: color 0.2s;
+}
+
+.page-toc-summary:hover {
+  color: var(--accent);
+}
+
+.page-toc-summary:focus-visible {
+  color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.page-toc-body {
+  margin-top: 1rem;
+}
+
+.page-toc-body #TableOfContents {
+  list-style: none;
+  padding: 0;
+}
+
+.page-toc-body #TableOfContents ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-toc-body #TableOfContents a {
+  display: block;
+  padding: 0.25rem 0;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.page-toc-body #TableOfContents a:hover,
+.page-toc-body #TableOfContents a:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+
+.page-toc-body #TableOfContents a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .page-content {
   max-width: 680px;
 }
 
 .page-content h2 {
+  scroll-margin-top: 1rem;
   font-family: var(--sans);
   font-size: 1.4rem;
   font-weight: 600;
