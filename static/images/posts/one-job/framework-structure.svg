@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 8; }
+    .step-title { font-size: 14px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 11.5px; fill: #5C5C5C; }
+    .step-detail { font-size: 10px; fill: #5C5C5C; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .header { font-size: 10px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .path-label { font-size: 9px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.06em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .converge-line { stroke: #1B2A4A; stroke-width: 1.5; fill: none; }
+
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .step-detail { fill: #8FA88F; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .path-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .converge-line { stroke: #3CEC6A; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="330" y="20" text-anchor="middle" class="header">Role Alignment Framework</text>
+
+  <!-- ==================== TOP PATH ==================== -->
+
+  <text x="16" y="44" class="path-label">Fit evaluation</text>
+
+  <!-- Core Function Alignment -->
+  <rect x="16" y="52" width="130" height="52" class="step-box" rx="8"/>
+  <text x="81" y="74" text-anchor="middle" class="step-title">Core Function</text>
+  <text x="81" y="92" text-anchor="middle" class="step-title">Alignment</text>
+
+  <!-- Arrow -->
+  <line x1="146" y1="78" x2="174" y2="78" class="arrow"/>
+
+  <!-- Company Archetype -->
+  <rect x="176" y="52" width="140" height="72" class="step-box" rx="8"/>
+  <text x="246" y="72" text-anchor="middle" class="step-title">Company Archetype</text>
+  <text x="246" y="90" text-anchor="middle" class="step-detail">research / product</text>
+  <text x="246" y="104" text-anchor="middle" class="step-detail">sales / deployment</text>
+
+  <!-- Arrow -->
+  <line x1="316" y1="88" x2="344" y2="88" class="arrow"/>
+
+  <!-- Role Tier -->
+  <rect x="346" y="52" width="140" height="72" class="step-box" rx="8"/>
+  <text x="416" y="72" text-anchor="middle" class="step-title">Role Tier</text>
+  <text x="416" y="90" text-anchor="middle" class="step-detail">Core / Constrained</text>
+  <text x="416" y="104" text-anchor="middle" class="step-detail">Adjacent / Support</text>
+
+  <!-- ==================== BOTTOM PATH ==================== -->
+
+  <text x="16" y="154" class="path-label">Growth strategy</text>
+
+  <!-- Next Role Strategy -->
+  <rect x="16" y="162" width="130" height="52" class="step-box" rx="8"/>
+  <text x="81" y="184" text-anchor="middle" class="step-title">Next Role</text>
+  <text x="81" y="202" text-anchor="middle" class="step-title">Strategy</text>
+
+  <!-- Arrow -->
+  <line x1="146" y1="188" x2="174" y2="188" class="arrow"/>
+
+  <!-- Gap Closure -->
+  <rect x="176" y="156" width="140" height="72" class="step-box" rx="8"/>
+  <text x="246" y="176" text-anchor="middle" class="step-title">Gap Closure</text>
+  <text x="246" y="194" text-anchor="middle" class="step-detail">outcome ownership</text>
+  <text x="246" y="208" text-anchor="middle" class="step-detail">PMF intuition / team bldg</text>
+
+  <!-- Arrow -->
+  <line x1="316" y1="192" x2="344" y2="192" class="arrow"/>
+
+  <!-- Kill Switch -->
+  <rect x="346" y="156" width="140" height="72" class="step-box" rx="8"/>
+  <text x="416" y="176" text-anchor="middle" class="step-title">Kill Switch</text>
+  <text x="416" y="194" text-anchor="middle" class="step-detail">4 forcing questions</text>
+  <text x="416" y="208" text-anchor="middle" class="step-detail">binary pass/fail</text>
+
+  <!-- ==================== CONVERGENCE ==================== -->
+
+  <!-- Top path exit -->
+  <line x1="486" y1="88" x2="510" y2="88" class="converge-line"/>
+  <!-- Bottom path exit -->
+  <line x1="486" y1="192" x2="510" y2="192" class="converge-line"/>
+  <!-- Vertical merge spine -->
+  <line x1="510" y1="88" x2="510" y2="192" class="converge-line"/>
+  <!-- Single arrow into Verdict -->
+  <line x1="510" y1="140" x2="538" y2="140" class="arrow"/>
+
+  <!-- Verdict Box -->
+  <rect x="540" y="100" width="160" height="80" class="step-box" rx="8"/>
+  <text x="620" y="124" text-anchor="middle" class="step-title">Verdict</text>
+  <text x="620" y="142" text-anchor="middle" class="step-detail">Take the call</text>
+  <text x="620" y="154" text-anchor="middle" class="step-detail">Explore</text>
+  <text x="620" y="166" text-anchor="middle" class="step-detail">Pass / Hard pass</text>
+
+  <!-- ==================== Bottom annotation ==================== -->
+
+  <text x="360" y="262" text-anchor="middle" class="header">Two paths converge into a single decision</text>
+</svg>

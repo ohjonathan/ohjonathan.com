@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 220" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 8; }
+    .step-title { font-size: 14px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 11.5px; fill: #5C5C5C; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .header { font-size: 10px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .annotation { font-size: 10.5px; fill: #8A8A8A; font-style: italic; }
+    .ats-label { font-size: 10px; fill: #5C5C5C; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .annotation { fill: #5A7A5A; }
+    [data-theme="terminal"] .ats-label { fill: #8FA88F; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+  </defs>
+
+  <text x="290" y="22" text-anchor="middle" class="header">JOB SCANNING PIPELINE</text>
+
+  <!-- Step 1: ATS Sources (stacked) -->
+  <rect x="10" y="42" width="100" height="130" class="step-box" rx="8"/>
+  <text x="60" y="64" text-anchor="middle" class="step-title">4 ATS APIs</text>
+  <text x="60" y="84" text-anchor="middle" class="ats-label">Lever (5)</text>
+  <text x="60" y="100" text-anchor="middle" class="ats-label">Greenhouse (27)</text>
+  <text x="60" y="116" text-anchor="middle" class="ats-label">Ashby (56)</text>
+  <text x="60" y="132" text-anchor="middle" class="ats-label">YC direct (85)</text>
+  <text x="60" y="160" text-anchor="middle" class="step-desc">190+ companies</text>
+
+  <!-- Arrow -->
+  <line x1="110" y1="107" x2="138" y2="107" class="arrow"/>
+
+  <!-- Step 2: Scanner -->
+  <rect x="140" y="62" width="110" height="90" class="step-box" rx="8"/>
+  <text x="195" y="90" text-anchor="middle" class="step-title">Scanner</text>
+  <text x="195" y="108" text-anchor="middle" class="step-desc">dedup + filter</text>
+  <text x="195" y="124" text-anchor="middle" class="step-desc">every 8 hours</text>
+  <text x="195" y="142" text-anchor="middle" class="annotation">Raspberry Pi</text>
+
+  <!-- Arrow -->
+  <line x1="250" y1="107" x2="278" y2="107" class="arrow"/>
+
+  <!-- Step 3: Gemini Assessment -->
+  <rect x="280" y="62" width="120" height="90" class="step-box" rx="8"/>
+  <text x="340" y="90" text-anchor="middle" class="step-title">Gemini Filter</text>
+  <text x="340" y="108" text-anchor="middle" class="step-desc">reads assessment</text>
+  <text x="340" y="124" text-anchor="middle" class="step-desc">criteria from disk</text>
+  <text x="340" y="142" text-anchor="middle" class="annotation">LLM-based, not keyword</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="107" x2="428" y2="107" class="arrow"/>
+
+  <!-- Step 4: Telegram -->
+  <rect x="430" y="72" width="130" height="70" class="step-box" rx="8"/>
+  <text x="495" y="100" text-anchor="middle" class="step-title">Telegram</text>
+  <text x="495" y="118" text-anchor="middle" class="step-desc">relevant matches</text>
+  <text x="495" y="134" text-anchor="middle" class="step-desc">delivered to phone</text>
+
+  <!-- Bottom annotation -->
+  <text x="290" y="202" text-anchor="middle" class="annotation">all personalization in 3 config files · swap one markdown file to change targeting</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 200" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 8; }
+    .step-num { font-size: 13px; font-weight: 600; fill: #fff; }
+    .step-num-bg { fill: #1B2A4A; }
+    .step-title { font-size: 15px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 12.5px; fill: #5C5C5C; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .feedback { stroke: #8A8A8A; stroke-width: 1; stroke-dasharray: 6 4; fill: none; marker-end: url(#arrowGray); }
+    .feedback-path { fill: none; stroke: #8A8A8A; stroke-width: 1; }
+    .feedback-label { font-size: 11px; fill: #8A8A8A; font-style: italic; }
+    .header { font-size: 11px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .annotation { font-size: 10.5px; fill: #8A8A8A; font-style: italic; }
+
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-num-bg { fill: #3CEC6A; }
+    [data-theme="terminal"] .step-num { fill: #0A1A10; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .feedback { stroke: #5A7A5A; }
+    [data-theme="terminal"] .feedback-path { stroke: #5A7A5A; }
+    [data-theme="terminal"] .feedback-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .annotation { fill: #5A7A5A; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="feedback-path"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="390" y="28" text-anchor="middle" class="header">DISCOVERY &amp; EVALUATION PIPELINE</text>
+
+  <!-- Step 1: Scanner -->
+  <g transform="translate(30, 52)">
+    <rect x="0" y="0" width="150" height="80" class="step-box" rx="8"/>
+    <circle cx="16" cy="-2" r="10" class="step-num-bg"/>
+    <text x="16" y="2" text-anchor="middle" class="step-num">1</text>
+    <text x="75" y="28" text-anchor="middle" class="step-title">Scanner</text>
+    <text x="75" y="46" text-anchor="middle" class="step-desc">190+ companies</text>
+    <text x="75" y="62" text-anchor="middle" class="step-desc">every 8 hours</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="180" y1="92" x2="218" y2="92" class="arrow"/>
+
+  <!-- Step 2: Telegram -->
+  <g transform="translate(220, 52)">
+    <rect x="0" y="0" width="140" height="80" class="step-box" rx="8"/>
+    <circle cx="16" cy="-2" r="10" class="step-num-bg"/>
+    <text x="16" y="2" text-anchor="middle" class="step-num">2</text>
+    <text x="70" y="28" text-anchor="middle" class="step-title">Telegram</text>
+    <text x="70" y="46" text-anchor="middle" class="step-desc">Gemini filters,</text>
+    <text x="70" y="62" text-anchor="middle" class="step-desc">delivers matches</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="360" y1="92" x2="418" y2="92" class="arrow"/>
+
+  <!-- Step 3: Evaluation -->
+  <g transform="translate(420, 52)">
+    <rect x="0" y="0" width="150" height="80" class="step-box" rx="8"/>
+    <circle cx="16" cy="-2" r="10" class="step-num-bg"/>
+    <text x="16" y="2" text-anchor="middle" class="step-num">3</text>
+    <text x="75" y="28" text-anchor="middle" class="step-title">Evaluation</text>
+    <text x="75" y="46" text-anchor="middle" class="step-desc">Claude analyzes</text>
+    <text x="75" y="62" text-anchor="middle" class="step-desc">role fit + web research</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="570" y1="92" x2="618" y2="92" class="arrow"/>
+
+  <!-- Step 4: Human Decision -->
+  <g transform="translate(620, 52)">
+    <rect x="0" y="0" width="140" height="80" class="step-box" rx="8"/>
+    <circle cx="16" cy="-2" r="10" class="step-num-bg"/>
+    <text x="16" y="2" text-anchor="middle" class="step-num">4</text>
+    <text x="70" y="28" text-anchor="middle" class="step-title">Human Decision</text>
+    <text x="70" y="48" text-anchor="middle" class="step-desc">Apply or skip</text>
+  </g>
+
+  <!-- Feedback loop: dashed line from step 4 back to step 1 -->
+  <path d="M 690,132 L 690,156 Q 690,166 680,166 L 104,166 Q 94,166 94,156 L 94,132"
+        class="feedback" marker-end="url(#arrowGray)"/>
+
+  <!-- Feedback label -->
+  <text x="390" y="182" text-anchor="middle" class="feedback-label">frameworks update with each evaluation</text>
+</svg>

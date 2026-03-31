@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 200" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 8; }
+    .step-title { font-size: 14px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 11.5px; fill: #5C5C5C; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .header { font-size: 10px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .verdict { font-size: 10px; fill: #5C5C5C; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .verdict { fill: #8FA88F; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+  </defs>
+
+  <text x="290" y="22" text-anchor="middle" class="header">EVALUATION SESSION</text>
+
+  <!-- Step 1: JD Input -->
+  <rect x="10" y="48" width="110" height="70" class="step-box" rx="8"/>
+  <text x="65" y="76" text-anchor="middle" class="step-title">Job</text>
+  <text x="65" y="92" text-anchor="middle" class="step-title">Description</text>
+  <text x="65" y="110" text-anchor="middle" class="step-desc">pasted by Johnny</text>
+
+  <line x1="120" y1="83" x2="148" y2="83" class="arrow"/>
+
+  <!-- Step 2: Web Research -->
+  <rect x="150" y="48" width="110" height="70" class="step-box" rx="8"/>
+  <text x="205" y="72" text-anchor="middle" class="step-title">Web Research</text>
+  <text x="205" y="90" text-anchor="middle" class="step-desc">stage, funding,</text>
+  <text x="205" y="104" text-anchor="middle" class="step-desc">news, headcount</text>
+
+  <line x1="260" y1="83" x2="288" y2="83" class="arrow"/>
+
+  <!-- Step 3: Framework -->
+  <rect x="290" y="40" width="120" height="86" class="step-box" rx="8"/>
+  <text x="350" y="64" text-anchor="middle" class="step-title">Framework</text>
+  <text x="350" y="82" text-anchor="middle" class="step-desc">archetype + tier</text>
+  <text x="350" y="96" text-anchor="middle" class="step-desc">gap closure</text>
+  <text x="350" y="110" text-anchor="middle" class="step-desc">kill switch</text>
+
+  <line x1="410" y1="83" x2="438" y2="83" class="arrow"/>
+
+  <!-- Step 4: Verdict -->
+  <rect x="440" y="40" width="130" height="120" class="step-box" rx="8"/>
+  <text x="505" y="64" text-anchor="middle" class="step-title">Verdict</text>
+  <text x="505" y="86" text-anchor="middle" class="verdict">Take the call</text>
+  <text x="505" y="102" text-anchor="middle" class="verdict">Explore with caution</text>
+  <text x="505" y="118" text-anchor="middle" class="verdict">Probably pass</text>
+  <text x="505" y="134" text-anchor="middle" class="verdict">Hard pass</text>
+  <text x="505" y="152" text-anchor="middle" class="step-desc">+ tier + scores</text>
+</svg>

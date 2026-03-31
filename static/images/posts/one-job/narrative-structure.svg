@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 280" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 8; }
+    .step-title { font-size: 14px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 11.5px; fill: #5C5C5C; }
+    .header { font-size: 10px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="290" y="24" text-anchor="middle" class="header">Master Career Narrative Architecture</text>
+
+  <!-- ==================== LEFT: Master Narrative ==================== -->
+
+  <rect x="16" y="60" width="130" height="170" class="step-box" rx="8"/>
+  <text x="81" y="120" text-anchor="middle" class="step-title">Master</text>
+  <text x="81" y="138" text-anchor="middle" class="step-title">Narrative</text>
+  <text x="81" y="162" text-anchor="middle" class="step-desc">v10 · ~630 lines</text>
+  <text x="81" y="178" text-anchor="middle" class="step-desc">6 sections</text>
+
+  <!-- ==================== CENTER: Format Outputs ==================== -->
+
+  <!-- Resume Bullets -->
+  <rect x="215" y="46" width="150" height="52" class="step-box" rx="8"/>
+  <text x="290" y="68" text-anchor="middle" class="step-title">Resume Bullets</text>
+  <text x="290" y="86" text-anchor="middle" class="step-desc">impact-first, tone variants</text>
+
+  <!-- LinkedIn Version -->
+  <rect x="215" y="118" width="150" height="52" class="step-box" rx="8"/>
+  <text x="290" y="140" text-anchor="middle" class="step-title">LinkedIn Version</text>
+  <text x="290" y="158" text-anchor="middle" class="step-desc">public-facing framing</text>
+
+  <!-- Website Version -->
+  <rect x="215" y="190" width="150" height="52" class="step-box" rx="8"/>
+  <text x="290" y="212" text-anchor="middle" class="step-title">Website Version</text>
+  <text x="290" y="230" text-anchor="middle" class="step-desc">project-focused</text>
+
+  <!-- ==================== RIGHT: Consumers ==================== -->
+
+  <!-- Resume Skill -->
+  <rect x="434" y="46" width="130" height="52" class="step-box" rx="8"/>
+  <text x="499" y="68" text-anchor="middle" class="step-title">Resume Skill</text>
+  <text x="499" y="86" text-anchor="middle" class="step-desc">3-file decision engine</text>
+
+  <!-- Cover Letters -->
+  <rect x="434" y="118" width="130" height="52" class="step-box" rx="8"/>
+  <text x="499" y="140" text-anchor="middle" class="step-title">Cover Letters</text>
+  <text x="499" y="158" text-anchor="middle" class="step-desc">project system prompt</text>
+
+  <!-- Essays -->
+  <rect x="434" y="190" width="130" height="52" class="step-box" rx="8"/>
+  <text x="499" y="212" text-anchor="middle" class="step-title">Essays</text>
+  <text x="499" y="230" text-anchor="middle" class="step-desc">multi-session iteration</text>
+
+  <!-- ==================== ARROWS: Master Narrative -> Format Outputs ==================== -->
+
+  <!-- Fan-out from Master Narrative to 3 format boxes -->
+  <!-- Horizontal line from box -->
+  <line x1="146" y1="145" x2="176" y2="145" class="arrow" style="marker-end: none;"/>
+  <!-- Vertical spine -->
+  <line x1="176" y1="72" x2="176" y2="216" class="arrow" style="marker-end: none;"/>
+  <!-- Branch to Resume Bullets -->
+  <line x1="176" y1="72" x2="213" y2="72" class="arrow"/>
+  <!-- Branch to LinkedIn Version -->
+  <line x1="176" y1="144" x2="213" y2="144" class="arrow"/>
+  <!-- Branch to Website Version -->
+  <line x1="176" y1="216" x2="213" y2="216" class="arrow"/>
+
+  <!-- ==================== ARROWS: Format Outputs -> Consumers ==================== -->
+
+  <!-- Fan-out from formats to consumers -->
+  <!-- Horizontal collection line from format boxes -->
+  <line x1="365" y1="72" x2="395" y2="72" class="arrow" style="marker-end: none;"/>
+  <line x1="365" y1="144" x2="395" y2="144" class="arrow" style="marker-end: none;"/>
+  <line x1="365" y1="216" x2="395" y2="216" class="arrow" style="marker-end: none;"/>
+  <!-- Vertical spine -->
+  <line x1="395" y1="72" x2="395" y2="216" class="arrow" style="marker-end: none;"/>
+  <!-- Branch to Resume Skill -->
+  <line x1="395" y1="72" x2="432" y2="72" class="arrow"/>
+  <!-- Branch to Cover Letters -->
+  <line x1="395" y1="144" x2="432" y2="144" class="arrow"/>
+  <!-- Branch to Essays -->
+  <line x1="395" y1="216" x2="432" y2="216" class="arrow"/>
+
+  <!-- ==================== Column Labels ==================== -->
+
+  <text x="81" y="258" text-anchor="middle" class="header">Source</text>
+  <text x="290" y="258" text-anchor="middle" class="header">Formats</text>
+  <text x="499" y="258" text-anchor="middle" class="header">Consumers</text>
+</svg>

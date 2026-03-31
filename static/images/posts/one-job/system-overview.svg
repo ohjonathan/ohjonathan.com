@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 720" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 8; }
+    .step-num { font-size: 12px; font-weight: 600; fill: #fff; }
+    .step-num-bg { fill: #1B2A4A; }
+    .step-title { font-size: 14px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 12px; fill: #5C5C5C; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .gate-line { stroke: #E8E4DF; stroke-width: 1; stroke-dasharray: 6 4; }
+    .gate-label { font-size: 9px; fill: #8A8A8A; letter-spacing: 0.05em; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .header { font-size: 10px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .layer-label { font-size: 9.5px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.06em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-num-bg { fill: #3CEC6A; }
+    [data-theme="terminal"] .step-num { fill: #0A1A10; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .gate-line { stroke: #1C2E24; }
+    [data-theme="terminal"] .gate-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .layer-label { fill: #5A7A5A; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="200" y="28" text-anchor="middle" class="header">Application System Pipeline</text>
+
+  <!-- Step 1: Foundation -->
+  <g transform="translate(40, 46)">
+    <rect class="step-box" x="0" y="0" width="320" height="64" rx="8"/>
+    <circle class="step-num-bg" cx="24" cy="22" r="11"/>
+    <text class="step-num" x="24" y="26" text-anchor="middle">1</text>
+    <text class="layer-label" x="44" y="22">Foundation</text>
+    <text class="step-title" x="44" y="40">Master Career Narrative</text>
+    <text class="step-desc" x="44" y="56">Core identity, values, and career arc</text>
+  </g>
+
+  <!-- Arrow 1-2 -->
+  <line class="arrow" x1="200" y1="114" x2="200" y2="128"/>
+
+  <!-- Gate 1-2 -->
+  <line class="gate-line" x1="60" y1="136" x2="164" y2="136"/>
+  <text class="gate-label" x="200" y="139" text-anchor="middle">human decision gate</text>
+  <line class="gate-line" x1="236" y1="136" x2="340" y2="136"/>
+
+  <!-- Arrow into step 2 -->
+  <line class="arrow" x1="200" y1="144" x2="200" y2="156"/>
+
+  <!-- Step 2: Strategy -->
+  <g transform="translate(40, 160)">
+    <rect class="step-box" x="0" y="0" width="320" height="64" rx="8"/>
+    <circle class="step-num-bg" cx="24" cy="22" r="11"/>
+    <text class="step-num" x="24" y="26" text-anchor="middle">2</text>
+    <text class="layer-label" x="44" y="22">Strategy</text>
+    <text class="step-title" x="44" y="40">Role Alignment Framework</text>
+    <text class="step-desc" x="44" y="56">Map strengths to target role families</text>
+  </g>
+
+  <!-- Arrow 2-3 -->
+  <line class="arrow" x1="200" y1="228" x2="200" y2="242"/>
+
+  <!-- Gate 2-3 -->
+  <line class="gate-line" x1="60" y1="250" x2="164" y2="250"/>
+  <text class="gate-label" x="200" y="253" text-anchor="middle">human decision gate</text>
+  <line class="gate-line" x1="236" y1="250" x2="340" y2="250"/>
+
+  <!-- Arrow into step 3 -->
+  <line class="arrow" x1="200" y1="258" x2="200" y2="270"/>
+
+  <!-- Step 3: Targeting -->
+  <g transform="translate(40, 274)">
+    <rect class="step-box" x="0" y="0" width="320" height="64" rx="8"/>
+    <circle class="step-num-bg" cx="24" cy="22" r="11"/>
+    <text class="step-num" x="24" y="26" text-anchor="middle">3</text>
+    <text class="layer-label" x="44" y="22">Targeting</text>
+    <text class="step-title" x="44" y="40">Company Selection Pipeline</text>
+    <text class="step-desc" x="44" y="56">Curate and rank target companies</text>
+  </g>
+
+  <!-- Arrow 3-4 -->
+  <line class="arrow" x1="200" y1="342" x2="200" y2="356"/>
+
+  <!-- Gate 3-4 -->
+  <line class="gate-line" x1="60" y1="364" x2="164" y2="364"/>
+  <text class="gate-label" x="200" y="367" text-anchor="middle">human decision gate</text>
+  <line class="gate-line" x1="236" y1="364" x2="340" y2="364"/>
+
+  <!-- Arrow into step 4 -->
+  <line class="arrow" x1="200" y1="372" x2="200" y2="384"/>
+
+  <!-- Step 4: Discovery -->
+  <g transform="translate(40, 388)">
+    <rect class="step-box" x="0" y="0" width="320" height="64" rx="8"/>
+    <circle class="step-num-bg" cx="24" cy="22" r="11"/>
+    <text class="step-num" x="24" y="26" text-anchor="middle">4</text>
+    <text class="layer-label" x="44" y="22">Discovery</text>
+    <text class="step-title" x="44" y="40">Job Scraping Bot</text>
+    <text class="step-desc" x="44" y="56">Automated listing collection and alerts</text>
+  </g>
+
+  <!-- Arrow 4-5 -->
+  <line class="arrow" x1="200" y1="456" x2="200" y2="470"/>
+
+  <!-- Gate 4-5 -->
+  <line class="gate-line" x1="60" y1="478" x2="164" y2="478"/>
+  <text class="gate-label" x="200" y="481" text-anchor="middle">human decision gate</text>
+  <line class="gate-line" x1="236" y1="478" x2="340" y2="478"/>
+
+  <!-- Arrow into step 5 -->
+  <line class="arrow" x1="200" y1="486" x2="200" y2="498"/>
+
+  <!-- Step 5: Evaluation -->
+  <g transform="translate(40, 502)">
+    <rect class="step-box" x="0" y="0" width="320" height="64" rx="8"/>
+    <circle class="step-num-bg" cx="24" cy="22" r="11"/>
+    <text class="step-num" x="24" y="26" text-anchor="middle">5</text>
+    <text class="layer-label" x="44" y="22">Evaluation</text>
+    <text class="step-title" x="44" y="40">Claude Session Workflow</text>
+    <text class="step-desc" x="44" y="56">AI-assisted fit scoring and analysis</text>
+  </g>
+
+  <!-- Arrow 5-6 -->
+  <line class="arrow" x1="200" y1="570" x2="200" y2="584"/>
+
+  <!-- Gate 5-6 -->
+  <line class="gate-line" x1="60" y1="592" x2="164" y2="592"/>
+  <text class="gate-label" x="200" y="595" text-anchor="middle">human decision gate</text>
+  <line class="gate-line" x1="236" y1="592" x2="340" y2="592"/>
+
+  <!-- Arrow into step 6 -->
+  <line class="arrow" x1="200" y1="600" x2="200" y2="612"/>
+
+  <!-- Step 6: Execution -->
+  <g transform="translate(40, 616)">
+    <rect class="step-box" x="0" y="0" width="320" height="64" rx="8"/>
+    <circle class="step-num-bg" cx="24" cy="22" r="11"/>
+    <text class="step-num" x="24" y="26" text-anchor="middle">6</text>
+    <text class="layer-label" x="44" y="22">Execution</text>
+    <text class="step-title" x="44" y="40">Skills, Resume, Essays</text>
+    <text class="step-desc" x="44" y="56">Tailored deliverables per application</text>
+  </g>
+
+</svg>
