@@ -6,7 +6,7 @@ tags: ["ai", "career", "claude", "systems"]
 draft: false
 ---
 
-I got married four times. Three and four happened back-to-back in Asia — ceremonies for family in different countries. Between the events, I had a lot of downtime in Trinidad. Long drives, slow mornings, hours where the only thing to do was think.
+I had four weddings of my own. Three and four happened back-to-back in Asia — ceremonies for family in different countries. Between the events, I had a lot of downtime in Trinidad. Long drives, slow mornings, hours where the only thing to do was think.
 
 So I thought about what I actually want to do with my career. Not the interview version. The real version. I spent a month in structured conversations with Claude, and by the time I came home I had exactly one role I wanted: Product Manager, Claude Code at Anthropic.
 
