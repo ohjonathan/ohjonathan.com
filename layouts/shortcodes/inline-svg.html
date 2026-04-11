@@ -1,1 +1,10 @@
-{{ readFile (printf "static/%s" (.Get 0)) | safeHTML }}
+{{ $path := .Get 0 -}}
+{{ $raw := readFile (printf "static/%s" $path) -}}
+{{ $basename := path.Base $path -}}
+{{ $name := replaceRE `\.svg$` "" $basename -}}
+{{ $label := replaceRE `-` " " $name | title -}}
+{{ $withRole := replaceRE `<svg ` (printf `<svg role="img" aria-label="%s" ` $label) $raw -}}
+{{ $accessible := replaceRE `(<svg[^>]*>)` (printf `${1}<title>%s</title>` $label) $withRole -}}
+<div class="svg-scroll-container" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+{{ $accessible | safeHTML }}
+</div>

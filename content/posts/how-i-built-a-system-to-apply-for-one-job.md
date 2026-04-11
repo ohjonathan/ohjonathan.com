@@ -6,7 +6,7 @@ tags: ["ai", "career", "claude", "systems"]
 draft: false
 ---
 
-I had four weddings of my own. Three and four happened back-to-back in Asia — ceremonies for family in different countries. Between the events, I had a lot of downtime in transit. Long drives, slow mornings, hours where the only thing to do was think.
+My partner and I had four wedding celebrations — the last two back-to-back in Asia, ceremonies for family in different countries. Between the events, I had a lot of downtime in transit. Long drives, slow mornings, hours where the only thing to do was think.
 
 So I thought about what I actually want to do with my career. Not the interview version. The real version. I spent a month in structured conversations with Claude, and by the time I came home I had exactly one role I wanted: Product Manager, Claude Code at Anthropic.
 
@@ -20,6 +20,8 @@ This post isn't the application. It's the system I built to produce it.
 - **Layer 4 — Discovery.** A job scanner running on a Raspberry Pi that monitors 190+ companies every 8 hours and delivers matches via Telegram.
 - **Layer 5 — Evaluation.** A Claude session that auto-researches each company, runs the full framework, and produces a structured verdict.
 - **Layer 6 — Execution.** A 3-file resume skill that tailors content per JD, plus a project system prompt for cover letters and essays.
+
+The 190-company scanner was the wide end of the funnel. Anthropic was the only company that survived the kill switch. Most products of the system — scanner, evaluator, resume skill — are general-purpose by design. But the only trigger I pulled was for one role.
 
 Every layer built with Claude. Every decision traceable. Glass box, not black box.
 
@@ -113,7 +115,7 @@ Cover letters and essays aren't a separate skill — they're handled by the proj
 
 At McKinsey, I solo-built an enterprise analytical platform. 114 interactive dashboards, 63 data packages, 177 analytical outputs total. Built with Cursor and Claude in 13 calendar days, now generating content for CIO steering committee presentations.
 
-The classification engine is deliberately rule-based — keyword matching, not LLM inference. Claude handles only the 280 ambiguous edge cases, and a human reviews every one. Twelve codified rules govern the workspace: data lineage on every output, auto-committed artifacts, routed files. The agent operates within a system designed to make it predictable.
+The classification engine is deliberately rule-based — keyword matching, not LLM inference. Claude handles only the 280 ambiguous edge cases, and a human reviews every one. Twelve codified rules govern the workspace: data lineage on every output, auto-committed artifacts, routed files. The agent operates within a system designed to make it predictable. This is the same boundary that matters in a CLI coding agent: knowing exactly where deterministic tooling ends and LLM inference begins, and making that boundary explicit.
 
 ## The Meta Layer
 
@@ -129,6 +131,10 @@ The system used to produce this blog post — multi-session orchestration, struc
 
 The architecture scales beyond me. The scanner is a framework — swap three config files. The resume skill is a template for building other skills. The evaluation session is a project setup anyone can replicate.
 
+Yes, I built a multi-model data pipeline, a Raspberry Pi scanner, and a 6-layer architecture to submit one application. Objectively, this is overkill. But the pipeline was never just about applying — it was a sandbox to prove how I believe AI products should be designed: transparent, human-steered, and built to compound.
+
 -----
 
 *This post was written with Claude. The system it describes was built with Claude. The system is the argument. If you want to see the code, the repos are on [GitHub](https://github.com/ohjonathan). If you want to talk about the approach, I'm on [LinkedIn](https://linkedin.com/in/ohjohnny).*
+
+*Status: Application submitted. March 2026.*
