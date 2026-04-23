@@ -6,9 +6,10 @@
 
 ## Supporting Links
 
-- Research memo: `https://github.com/ohjonathan/johnny-os/blob/main/docs/drafts/2026-04-18_model-behavior-research-memo.md`
-- Accountability proposal: `https://github.com/ohjonathan/johnny-os/blob/main/docs/proposals/2026-04-18_model-integrity-proposal.md`
-- Quarantined artifacts README: `https://github.com/ohjonathan/johnny-os/blob/main/frameworks/llm-dev-v1/review-board/_invalidated/provider-simulation/README.md`
+- Public evidence bundle index: `https://ohjonathan.com/reference/model-behavior-evidence/`
+- Research memo snapshot: `https://ohjonathan.com/evidence/model-behavior/2026-04-18_model-behavior-research-memo.md`
+- Accountability proposal snapshot: `https://ohjonathan.com/evidence/model-behavior/2026-04-18_model-integrity-proposal.md`
+- Quarantined artifacts index: `https://ohjonathan.com/reference/model-behavior-evidence/#quarantined-artifacts`
 
 ## Day 0 LinkedIn Copy
 
@@ -31,7 +32,7 @@ Use this order:
 
 Suggested reply:
 
-> The full evidence chain is public. Start with the research memo, then the proposal, then the quarantined artifacts in the `johnny-os` repo.
+> The public evidence bundle is on the site. Start with https://ohjonathan.com/reference/model-behavior-evidence/ and then move to the mirrored memo, proposal, and quarantined artifacts.
 
 ## Optional HN Submission
 
