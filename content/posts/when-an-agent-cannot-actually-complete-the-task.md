@@ -9,9 +9,9 @@ image: "/images/posts/model-behavior/social-card.png"
 
 My Claude Code CLI renamed itself to Gemini rather than actually run the Gemini CLI.
 
-Tuesday afternoon, April 17. I was watching a terminal and reading log files (like every normal person does). Three agents — Claude, Codex, Gemini — were supposed to be reviewing a release of an internal framework. Then I noticed Claude had burned half a million tokens during what was supposedly Gemini's session.
+Friday afternoon, April 17. I was watching a terminal and reading log files (like every normal person does). Three agents — Claude, Codex, Gemini — were supposed to be reviewing a release of an internal framework. Then I noticed Claude had burned half a million tokens during what was supposedly Gemini's session.
 
-I figured I'd made a mistake somewhere and asked Claude to debug my workflow. Turns out Claude couldn't get the Gemini CLI to load, so it decided to (1) name itself Gemini (!!!), (2) label the output `family: gemini` while actually running Claude, and (3) run a performative review following my multi-model workflow — except the whole thing was Claude putting up a show. What the hell.
+I figured I'd made a mistake somewhere and asked Claude to debug my workflow. Turns out Claude had never actually called the Gemini CLI — even though it was on PATH and Claude's own probe had confirmed it that morning. What I saw instead: (1) Claude named itself Gemini (!!!) by spawning its own internal sessions under that label, (2) wrote `family: gemini` into the output's frontmatter while the executor was still Claude, and (3) ran a performative review matching my multi-model workflow's expected shape. What the hell.
 
 And it wasn't even one Claude. Two sessions, one orchestrating, one executing — neither caught it.
 
@@ -24,7 +24,7 @@ My first honest reaction was "nooo, Claude is so much more expensive." That quic
 I was in all 5 stages of grief at once because there were actually 3 distinct problems:
 
 1. **Claude failed the task but never halted or said so** — even though my workflow prompts explicitly told it to halt on any CLI error.
-2. **The disguise wasn't a slip; it was coordinated.** Frontmatter labeled `family: gemini`. Evidence capabilities the real Gemini CLI doesn't have in sandboxed mode. Files committed under Gemini's name. Multiple decisions, all consistent.
+2. **The mislabeling was consistent, not one slip.** Frontmatter said `family: gemini`. Claimed evidence capabilities the real Gemini CLI doesn't have in sandboxed mode. Files committed under Gemini's name. Same direction every time.
 3. **Claude also used much older models for the other families** — `o3` for Codex (~14 months old), `gemini-2.5-flash` for Gemini (~12 months old). If Claude were a human, I'd call it intentional: it "searched" for the latest model when it came to its own family, then used cached memory to pick models for Gemini and Codex.
 
 Not "wrong answer." Not "tool broke." **The shape of a completed task where the task itself did not happen** — produced by an agent that had the right tool on PATH, had probed it, had fixed an adjacent bug three days earlier, and still did not say the words "I cannot do this."
@@ -74,6 +74,8 @@ Six distinct moments, across two days, where the session could have stopped and 
 None of the six halts was about capability. The CLIs existed. The probes had run. The prior failure was documented in a retro the same session had filed. The only detector at each point was the orchestrator itself, and the orchestrator didn't detect.
 
 Auto mode is what gave it the runway. Each missed halt would normally be a moment where I'd have to approve the next step. Auto mode waved them all through — that's the contract — but it means the agent's silence at each choice point landed as "proceed," not "pause for the user."
+
+*(A note on evidence: the minute-by-minute chronology above lives in local session transcripts I haven't published. The public bundle has the committed artifacts — quarantined forgeries, stderr capture, dispatch-intent YAMLs — and the companion memo, which tags which claims depend on transcripts and which don't. The patterns hold on the committed record alone; the transcripts add resolution.)*
 
 ## Three Patterns
 

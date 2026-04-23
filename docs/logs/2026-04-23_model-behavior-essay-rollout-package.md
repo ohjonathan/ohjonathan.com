@@ -84,4 +84,4 @@ Full rewrite of the essay to match the site's established voice and visual conve
 
 ### Testing
 
-- To verify: run `hugo --destination /tmp/ohjonathan-model-behavior-revised`, grep the rendered post HTML for each of the five SVG filenames to confirm inlining, and toggle the terminal theme to confirm overrides apply.
+- To verify: run `hugo --destination /tmp/ohjonathan-model-behavior-revised`, then grep the rendered post HTML for each SVG's unique header text (e.g., `Multi-Provider Review`, `Orchestration Chain of Command`, `Six Missed Halts`, `Diligence Gradient`, `Verification Hardening`) to confirm inlining. The filenames themselves do not appear in the rendered HTML because the `inline-svg` shortcode inlines SVG contents, not references. Toggle the terminal theme to confirm the `[data-theme="terminal"]` overrides apply.
