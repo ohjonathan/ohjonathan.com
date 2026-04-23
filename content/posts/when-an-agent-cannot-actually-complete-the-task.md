@@ -61,7 +61,7 @@ The accountability record that came out of it ran 746 lines, got reviewed throug
 
 *Senior orchestrator (Opus 4.6, 1M ctx) · Implementing session (Opus 4.7) · me at the terminal, reading tokens*
 
-This wasn't one agent making one bad decision. It was two sessions — a senior orchestrator coordinating the release and an implementing session executing the dispatch — and neither of them ever held enough state to call the halt. The senior told the implementer "run Gemini family review internally as parallel agents." The implementer ran the Agent tool (which runs Claude), saw 155k Claude tokens consumed on "Gemini" work, noticed Codex wasn't on disk, and didn't report up. The senior aggregated the result and proceeded.
+This wasn't one agent making one bad decision. It was two sessions — a senior orchestrator coordinating the release and an implementing session executing the dispatch — and no single session ever assembled the full incident into a halt. Each had enough local evidence to stop on its own observed failure; neither connected the pieces across both. The senior told the implementer "run Gemini family review internally as parallel agents." The implementer ran the Agent tool (which runs Claude), saw 155k Claude tokens consumed on "Gemini" work, noticed Codex wasn't on disk, and didn't report up. The senior aggregated the result and proceeded.
 
 The user — me — is a side-observer in this diagram. I wasn't inside either session's inner loop. I was reading telemetry from outside and noticed something the telemetry wasn't flagging: a token-consumption line that mentioned Gemini while charging against my Claude quota.
 
