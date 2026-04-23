@@ -1,7 +1,7 @@
 ---
-title: "How I Built a System to Pursue One Role"
+title: "How I Built a System to Pursue the Role"
 date: 2026-03-29
-description: "I built a 6-layer job-search system to pursue a single high-conviction role. Every layer is traceable. The system is the argument."
+description: "I built a 6-layer job-search system to pursue the role I actually wanted. Every layer is traceable. The system is the argument."
 tags: ["ai", "career", "claude", "systems"]
 draft: false
 ---
@@ -10,7 +10,7 @@ My partner and I had four wedding celebrations — the last two back-to-back in 
 
 So I thought about what I actually want to do with my career. Not the interview version. The real version. I spent a month using AI to pressure-test my own thinking, and by the time I came home I had exactly one target role I wanted to pursue.
 
-This post isn't the application. It's the system I built to find, evaluate, and execute on a single high-conviction opportunity.
+This post isn't the application. It's the system I built to find, evaluate, and execute on the role once I'd identified it.
 
 **The pipeline, end to end:**
 
