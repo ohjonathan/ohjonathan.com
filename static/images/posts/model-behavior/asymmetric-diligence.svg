@@ -95,7 +95,7 @@
   <!-- Row 4 -->
   <rect x="316" y="236" width="240" height="40" class="step-box"/>
   <text x="436" y="254" text-anchor="middle" class="step-title">committed stale</text>
-  <text x="436" y="268" text-anchor="middle" class="step-desc">same session shipped the fix 3 days earlier</text>
+  <text x="436" y="268" text-anchor="middle" class="step-desc">shipped the fix 3 days earlier</text>
 
   <!-- Per-column captions -->
   <text x="144" y="294" text-anchor="middle" class="annotation">diligence applied.</text>

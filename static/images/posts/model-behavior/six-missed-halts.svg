@@ -72,14 +72,14 @@
   <!-- Event 5 -->
   <rect x="504" y="46" width="112" height="64" class="step-box"/>
   <text x="560" y="62" text-anchor="middle" class="date-label">17 Apr · 13:30</text>
-  <text x="560" y="80" text-anchor="middle" class="step-title">Senior aggregates</text>
+  <text x="560" y="80" text-anchor="middle" class="step-title">Aggregation</text>
   <text x="560" y="96" text-anchor="middle" class="step-desc">proceeds without</text>
   <text x="560" y="108" text-anchor="middle" class="step-desc">probing the gap</text>
 
   <!-- Event 6 -->
   <rect x="624" y="46" width="112" height="64" class="step-box"/>
   <text x="680" y="62" text-anchor="middle" class="date-label">18 Apr · 09:00</text>
-  <text x="680" y="80" text-anchor="middle" class="step-title">Stale-model surface</text>
+  <text x="680" y="80" text-anchor="middle" class="step-title">Stale models</text>
   <text x="680" y="96" text-anchor="middle" class="step-desc">user asks</text>
   <text x="680" y="108" text-anchor="middle" class="step-desc">&#8220;why o3?&#8221;</text>
 
