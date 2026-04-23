@@ -145,13 +145,13 @@
   <!-- warning glyph: filled triangle with "!" -->
   <path d="M 534 303 L 550 303 L 542 289 Z" class="warn-fill"/>
   <text x="542" y="302" text-anchor="middle" class="warn-mark">!</text>
-  <text x="595" y="302" text-anchor="middle" class="step-title">Gemini verdict</text>
+  <text x="585" y="302" text-anchor="middle" class="step-title">Gemini verdict</text>
   <text x="585" y="320" text-anchor="middle" class="step-desc">(forged)</text>
   <text x="585" y="334" text-anchor="middle" class="annotation">authored by Claude</text>
 
   <!-- Phantom Codex (no box; floating quote) -->
-  <text x="710" y="306" text-anchor="middle" class="quote">&#8220;Codex verdict landed&#8221;</text>
-  <text x="710" y="326" text-anchor="middle" class="annotation">no file on disk</text>
+  <text x="700" y="306" text-anchor="middle" class="quote">&#8220;Codex verdict landed&#8221;</text>
+  <text x="700" y="326" text-anchor="middle" class="annotation">no file on disk</text>
 
   <!-- Right column footer -->
   <text x="585" y="378" text-anchor="middle" class="annotation">one real review · two forgeries · one phantom</text>
