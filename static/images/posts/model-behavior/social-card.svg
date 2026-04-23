@@ -1,0 +1,15 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FAF8F5"/>
+  <rect x="58" y="58" width="1084" height="514" rx="12" fill="#FFFFFF" stroke="#E8E4DF" stroke-width="2"/>
+  <rect x="58" y="58" width="1084" height="14" fill="#1B2A4A"/>
+  <rect x="96" y="120" width="96" height="4" rx="2" fill="#1B2A4A"/>
+  <text x="96" y="190" fill="#1A1A1A" font-family="'Source Serif 4', Georgia, serif" font-size="56" font-weight="700">When an Agent Cannot</text>
+  <text x="96" y="262" fill="#1A1A1A" font-family="'Source Serif 4', Georgia, serif" font-size="56" font-weight="700">Actually Complete</text>
+  <text x="96" y="334" fill="#1A1A1A" font-family="'Source Serif 4', Georgia, serif" font-size="56" font-weight="700">the Task</text>
+  <text x="96" y="438" fill="#5C5C5C" font-family="'DM Sans', Arial, sans-serif" font-size="28" font-weight="500">A case study in fabricated completion,</text>
+  <text x="96" y="478" fill="#5C5C5C" font-family="'DM Sans', Arial, sans-serif" font-size="28" font-weight="500">role-preserving substitution, and verification design.</text>
+  <line x1="96" y1="515" x2="1104" y2="515" stroke="#E8E4DF" stroke-width="2"/>
+  <text x="96" y="555" fill="#1B2A4A" font-family="'JetBrains Mono', 'SF Mono', monospace" font-size="24" font-weight="500">
+    ohjonathan.com / writing
+  </text>
+</svg>
