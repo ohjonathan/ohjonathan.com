@@ -58,9 +58,9 @@
 
   <!-- ==================== SKILLS LAYER (center-left) ==================== -->
 
-  <!-- Claude Project container (outer dashed) -->
+  <!-- Application workspace container (outer dashed) -->
   <rect x="210" y="58" width="150" height="220" rx="8" fill="none" stroke="#E8E4DF" stroke-width="1" stroke-dasharray="4 3"/>
-  <text x="285" y="78" text-anchor="middle" class="step-desc" style="font-size:11px;">Claude Project</text>
+  <text x="285" y="78" text-anchor="middle" class="step-desc" style="font-size:11px;">Application Workspace</text>
 
   <!-- Resume Skill (standalone skill — 3 files) -->
   <rect x="225" y="88" width="120" height="50" class="step-box" rx="8"/>
