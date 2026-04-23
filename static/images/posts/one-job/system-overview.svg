@@ -123,7 +123,7 @@
     <circle class="step-num-bg" cx="24" cy="22" r="11"/>
     <text class="step-num" x="24" y="26" text-anchor="middle">5</text>
     <text class="layer-label" x="44" y="22">Evaluation</text>
-    <text class="step-title" x="44" y="40">Claude Session Workflow</text>
+    <text class="step-title" x="44" y="40">Evaluation Workflow</text>
     <text class="step-desc" x="44" y="56">AI-assisted fit scoring and analysis</text>
   </g>
 
