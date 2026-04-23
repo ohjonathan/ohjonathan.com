@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 320" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 6; }
+    .step-box-ghost { fill: none; stroke: #1B2A4A; stroke-width: 1.2; stroke-dasharray: 3 3; opacity: 0.45; rx: 6; }
+    .step-title { font-size: 13px; font-weight: 600; fill: #1A1A1A; }
+    .step-title-ghost { font-size: 13px; font-weight: 600; fill: #8A8A8A; }
+    .step-desc { font-size: 11px; fill: #5C5C5C; }
+    .step-desc-ghost { font-size: 11px; fill: #8A8A8A; font-style: italic; }
+    .mono { font-size: 11px; fill: #1A1A1A; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .mono-dim { font-size: 11px; fill: #8A8A8A; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-ghost { stroke: #8A8A8A; stroke-width: 1; stroke-dasharray: 3 3; fill: none; opacity: 0.5; }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .divider { stroke: #E8E4DF; stroke-width: 1; stroke-dasharray: 4 4; }
+    .header { font-size: 11px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .layer-label { font-size: 10.5px; font-weight: 600; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .annotation { font-size: 11px; fill: #8A8A8A; font-style: italic; }
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-box-ghost { stroke: #5A7A5A; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-title-ghost { fill: #5A7A5A; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .step-desc-ghost { fill: #5A7A5A; }
+    [data-theme="terminal"] .mono { fill: #D4E4D4; }
+    [data-theme="terminal"] .mono-dim { fill: #5A7A5A; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .arrow-ghost { stroke: #5A7A5A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .divider { stroke: #1C2E24; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .layer-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .annotation { fill: #5A7A5A; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="290" y="22" text-anchor="middle" class="header">Diligence Gradient  ·  Self vs. Others</text>
+
+  <!-- Column labels -->
+  <text x="24" y="50" class="layer-label">SELF</text>
+  <text x="316" y="50" class="layer-label">OTHERS</text>
+
+  <!-- Vertical divider -->
+  <line x1="290" y1="62" x2="290" y2="278" class="divider"/>
+
+  <!-- ============ SELF COLUMN (LEFT) ============ -->
+
+  <!-- Row 1 -->
+  <rect x="24" y="68" width="240" height="40" class="step-box"/>
+  <text x="144" y="86" text-anchor="middle" class="mono">claude-opus-4-6</text>
+  <text x="144" y="100" text-anchor="middle" class="step-desc">reference in handoff</text>
+  <line x1="144" y1="108" x2="144" y2="122" class="arrow"/>
+
+  <!-- Row 2 -->
+  <rect x="24" y="124" width="240" height="40" class="step-box"/>
+  <text x="144" y="142" text-anchor="middle" class="step-title">probed</text>
+  <text x="144" y="156" text-anchor="middle" class="step-desc">runs its own version check</text>
+  <line x1="144" y1="164" x2="144" y2="178" class="arrow"/>
+
+  <!-- Row 3 -->
+  <rect x="24" y="180" width="240" height="40" class="step-box"/>
+  <text x="144" y="198" text-anchor="middle" class="step-title">corrected</text>
+  <text x="144" y="212" text-anchor="middle" class="step-desc">updates reference to 4-7</text>
+  <line x1="144" y1="220" x2="144" y2="234" class="arrow"/>
+
+  <!-- Row 4 -->
+  <rect x="24" y="236" width="240" height="40" class="step-box"/>
+  <text x="144" y="254" text-anchor="middle" class="step-title">committed</text>
+  <text x="144" y="268" text-anchor="middle" class="step-desc">silent mechanical self-correction</text>
+
+  <!-- ============ OTHERS COLUMN (RIGHT) ============ -->
+
+  <!-- Row 1 -->
+  <rect x="316" y="68" width="240" height="40" class="step-box"/>
+  <text x="436" y="86" text-anchor="middle" class="mono">o3  ·  gemini-2.5-flash</text>
+  <text x="436" y="100" text-anchor="middle" class="step-desc">references in handoff</text>
+  <line x1="436" y1="108" x2="436" y2="122" class="arrow-ghost"/>
+
+  <!-- Row 2 (ghost) -->
+  <rect x="316" y="124" width="240" height="40" class="step-box-ghost"/>
+  <text x="436" y="142" text-anchor="middle" class="step-title-ghost">not probed</text>
+  <text x="436" y="156" text-anchor="middle" class="step-desc-ghost">no version check run</text>
+  <line x1="436" y1="164" x2="436" y2="178" class="arrow-ghost"/>
+
+  <!-- Row 3 (ghost) -->
+  <rect x="316" y="180" width="240" height="40" class="step-box-ghost"/>
+  <text x="436" y="198" text-anchor="middle" class="step-title-ghost">not corrected</text>
+  <text x="436" y="212" text-anchor="middle" class="step-desc-ghost">stale identifiers retained</text>
+  <line x1="436" y1="220" x2="436" y2="234" class="arrow"/>
+
+  <!-- Row 4 -->
+  <rect x="316" y="236" width="240" height="40" class="step-box"/>
+  <text x="436" y="254" text-anchor="middle" class="step-title">committed stale</text>
+  <text x="436" y="268" text-anchor="middle" class="step-desc">same session shipped the fix 3 days earlier</text>
+
+  <!-- Per-column captions -->
+  <text x="144" y="294" text-anchor="middle" class="annotation">diligence applied.</text>
+  <text x="436" y="294" text-anchor="middle" class="annotation">diligence withheld.</text>
+
+  <!-- Footer annotation -->
+  <text x="290" y="312" text-anchor="middle" class="annotation">The asymmetry is directional. Work done for self was not done for others.</text>
+
+</svg>

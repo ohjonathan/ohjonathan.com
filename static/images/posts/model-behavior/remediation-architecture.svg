@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 6; }
+    .step-box-warn { fill: rgba(200, 140, 0, 0.06); stroke: #1B2A4A; stroke-width: 1.5; rx: 6; }
+    .step-box-gate { fill: rgba(27, 42, 74, 0.06); stroke: #1B2A4A; stroke-width: 1.5; rx: 6; }
+    .step-box-inner { fill: none; stroke: #1B2A4A; stroke-width: 1; rx: 4; }
+    .step-title { font-size: 13px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 11px; fill: #5C5C5C; }
+    .mono { font-size: 11px; fill: #1A1A1A; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .divider { stroke: #E8E4DF; stroke-width: 1; stroke-dasharray: 4 4; }
+    .header { font-size: 11px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .layer-label { font-size: 10.5px; font-weight: 600; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .annotation { font-size: 11px; fill: #8A8A8A; font-style: italic; }
+    .caption { font-size: 12px; fill: #1B2A4A; font-style: italic; font-weight: 500; }
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-box-warn { fill: rgba(245, 166, 35, 0.08); stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-box-gate { fill: rgba(60, 236, 106, 0.1); stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-box-inner { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .mono { fill: #D4E4D4; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .divider { stroke: #1C2E24; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .layer-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .annotation { fill: #5A7A5A; }
+    [data-theme="terminal"] .caption { fill: #3CEC6A; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="390" y="22" text-anchor="middle" class="header">Verification Hardening  ·  v1.3.0 → v1.3.1</text>
+
+  <!-- Column labels -->
+  <text x="30" y="52" class="layer-label">BEFORE</text>
+  <text x="410" y="52" class="layer-label">AFTER</text>
+
+  <!-- Vertical divider -->
+  <line x1="390" y1="62" x2="390" y2="292" class="divider"/>
+
+  <!-- ============ BEFORE (LEFT) ============ -->
+
+  <!-- Row 1 -->
+  <rect x="30" y="68" width="340" height="44" class="step-box"/>
+  <text x="200" y="86" text-anchor="middle" class="step-title">Orchestrator</text>
+  <text x="200" y="102" text-anchor="middle" class="mono">pins model literals</text>
+  <line x1="200" y1="112" x2="200" y2="128" class="arrow"/>
+
+  <!-- Row 2 -->
+  <rect x="30" y="130" width="340" height="44" class="step-box"/>
+  <text x="200" y="148" text-anchor="middle" class="step-title">CLI</text>
+  <text x="200" y="164" text-anchor="middle" class="step-desc">executes with pinned model (may fail silently)</text>
+  <line x1="200" y1="174" x2="200" y2="190" class="arrow"/>
+
+  <!-- Row 3 -->
+  <rect x="30" y="192" width="340" height="44" class="step-box"/>
+  <text x="200" y="210" text-anchor="middle" class="step-title">Output</text>
+  <text x="200" y="226" text-anchor="middle" class="step-desc">committed to repo</text>
+  <line x1="200" y1="236" x2="200" y2="252" class="arrow"/>
+
+  <!-- Row 4 (warn) -->
+  <rect x="30" y="254" width="340" height="44" class="step-box-warn"/>
+  <text x="200" y="272" text-anchor="middle" class="step-title">Self-verification</text>
+  <text x="200" y="288" text-anchor="middle" class="annotation">same agent that could have forged the output</text>
+
+  <!-- Left caption -->
+  <text x="200" y="318" text-anchor="middle" class="caption">trust-based verification</text>
+
+  <!-- ============ AFTER (RIGHT) ============ -->
+
+  <!-- Row 1 -->
+  <rect x="410" y="68" width="340" height="44" class="step-box"/>
+  <text x="580" y="86" text-anchor="middle" class="step-title">Orchestrator</text>
+  <text x="580" y="102" text-anchor="middle" class="mono">--model auto  (no literals)</text>
+  <line x1="580" y1="112" x2="580" y2="128" class="arrow"/>
+
+  <!-- Row 2 -->
+  <rect x="410" y="130" width="340" height="44" class="step-box"/>
+  <text x="580" y="148" text-anchor="middle" class="step-title">CLI</text>
+  <text x="580" y="164" text-anchor="middle" class="step-desc">resolves its own model at dispatch time</text>
+  <line x1="580" y1="174" x2="580" y2="190" class="arrow"/>
+
+  <!-- Row 3 -->
+  <rect x="410" y="192" width="340" height="44" class="step-box"/>
+  <text x="580" y="210" text-anchor="middle" class="step-title">Output</text>
+  <text x="580" y="226" text-anchor="middle" class="step-desc">committed to repo</text>
+  <line x1="580" y1="236" x2="580" y2="252" class="arrow"/>
+
+  <!-- Row 4 (gate — doubled border) -->
+  <rect x="410" y="254" width="340" height="44" class="step-box-gate"/>
+  <rect x="414" y="258" width="332" height="36" class="step-box-inner"/>
+  <text x="580" y="272" text-anchor="middle" class="step-title">Independent verifier</text>
+  <text x="580" y="288" text-anchor="middle" class="step-desc">non-orchestrator agent or human  ·  attests + records hash</text>
+
+  <!-- Right caption -->
+  <text x="580" y="318" text-anchor="middle" class="caption">mechanically orthogonal verification</text>
+
+  <!-- Footer annotation -->
+  <text x="390" y="334" text-anchor="middle" class="annotation">The verifier is not the author.</text>
+
+</svg>

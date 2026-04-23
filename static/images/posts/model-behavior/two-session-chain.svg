@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 340" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 8; }
+    .hub-box { fill: rgba(27, 42, 74, 0.06); stroke: #1B2A4A; stroke-width: 1.5; rx: 8; }
+    .observer-box { fill: none; stroke: #1B2A4A; stroke-width: 1.2; stroke-dasharray: 4 3; rx: 8; }
+    .step-title { font-size: 14px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 11.5px; fill: #5C5C5C; }
+    .model-label { font-size: 10.5px; fill: #8A8A8A; font-family: 'JetBrains Mono', 'SF Mono', monospace; letter-spacing: 0.04em; }
+    .quote { font-size: 12px; fill: #1A1A1A; font-style: italic; }
+    .arrow { stroke: #1B2A4A; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .feedback { stroke: #8A8A8A; stroke-width: 1; stroke-dasharray: 5 4; fill: none; marker-end: url(#arrowGray); }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .feedback-path { fill: none; stroke: #8A8A8A; stroke-width: 1; }
+    .gate-label { font-size: 10px; fill: #8A8A8A; font-family: 'JetBrains Mono', 'SF Mono', monospace; letter-spacing: 0.05em; }
+    .header { font-size: 11px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .annotation { font-size: 11px; fill: #8A8A8A; font-style: italic; }
+    .feedback-label { font-size: 10.5px; fill: #8A8A8A; font-style: italic; }
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .hub-box { fill: rgba(60, 236, 106, 0.08); stroke: #3CEC6A; }
+    [data-theme="terminal"] .observer-box { stroke: #5A7A5A; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .model-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .quote { fill: #D4E4D4; }
+    [data-theme="terminal"] .arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .feedback { stroke: #5A7A5A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .feedback-path { stroke: #5A7A5A; }
+    [data-theme="terminal"] .gate-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .annotation { fill: #5A7A5A; }
+    [data-theme="terminal"] .feedback-label { fill: #5A7A5A; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="feedback-path"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="290" y="22" text-anchor="middle" class="header">Orchestration Chain of Command</text>
+
+  <!-- Senior orchestrator box -->
+  <rect x="140" y="46" width="300" height="74" class="step-box"/>
+  <text x="290" y="66" text-anchor="middle" class="model-label">Opus 4.6 · 1M context</text>
+  <text x="290" y="84" text-anchor="middle" class="step-title">Senior Orchestrator</text>
+  <text x="290" y="106" text-anchor="middle" class="quote">&#8220;run Gemini family review internally as parallel agents&#8221;</text>
+
+  <!-- Arrow: senior → implementing -->
+  <line x1="290" y1="120" x2="290" y2="148" class="arrow"/>
+  <text x="302" y="138" class="gate-label">directive</text>
+
+  <!-- Implementing session box -->
+  <rect x="140" y="152" width="300" height="74" class="step-box"/>
+  <text x="290" y="172" text-anchor="middle" class="model-label">Opus 4.7</text>
+  <text x="290" y="190" text-anchor="middle" class="step-title">Implementing Session</text>
+  <text x="290" y="212" text-anchor="middle" class="step-desc">spawns Agent tool ×3  ·  labels family: gemini</text>
+
+  <!-- Arrow: implementing → repo -->
+  <line x1="290" y1="226" x2="290" y2="254" class="arrow"/>
+  <text x="302" y="244" class="gate-label">writes</text>
+
+  <!-- Repo outcome (filled hub-box) -->
+  <rect x="100" y="258" width="380" height="54" class="hub-box"/>
+  <text x="290" y="278" text-anchor="middle" class="step-title">Repo: 2 forged Gemini verdicts</text>
+  <text x="290" y="296" text-anchor="middle" class="step-desc">Codex absence noted internally · not reported up</text>
+
+  <!-- Observer (user) box on the right, dashed -->
+  <rect x="478" y="70" width="92" height="72" class="observer-box"/>
+  <text x="524" y="94" text-anchor="middle" class="step-title">Me</text>
+  <text x="524" y="112" text-anchor="middle" class="step-desc">reading</text>
+  <text x="524" y="128" text-anchor="middle" class="step-desc">the tokens</text>
+
+  <!-- Dashed feedback arrow from observer back into the chain (curving to implementing session) -->
+  <path d="M 478 140 C 448 140, 440 185, 440 189" class="feedback"/>
+  <text x="442" y="160" text-anchor="end" class="feedback-label">155k Claude tokens</text>
+  <text x="442" y="174" text-anchor="end" class="feedback-label">for &#8220;Gemini&#8221; work</text>
+
+  <!-- Footer annotation -->
+  <text x="290" y="330" text-anchor="middle" class="annotation">No single choice halted the chain. The terminal was the first detector.</text>
+
+</svg>
