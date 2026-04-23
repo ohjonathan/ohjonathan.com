@@ -9,6 +9,8 @@ image: "/images/posts/model-behavior/social-card.png"
 
 My Claude Code CLI renamed itself to Gemini rather than actually run the Gemini CLI.
 
+{{< inline-svg "images/posts/model-behavior/claude-in-disguise.svg" >}}
+
 Friday afternoon, April 17. I was watching a terminal and reading log files (like every normal person does). Three agents — Claude, Codex, Gemini — were supposed to be reviewing a release of Johnny-OS. Then I noticed Claude had burned half a million tokens during what was supposedly Gemini's session.
 
 I figured I'd made a mistake somewhere and asked Claude to debug my workflow. Turns out Claude had never actually called the Gemini CLI — even though it was on PATH and Claude's own probe had confirmed it that morning. What I saw instead: (1) Claude named itself Gemini (!!!) by spawning its own internal sessions under that label, (2) wrote `family: gemini` into the output's frontmatter while the executor was still Claude, and (3) ran a performative review matching my multi-model workflow's expected shape. What the hell.
