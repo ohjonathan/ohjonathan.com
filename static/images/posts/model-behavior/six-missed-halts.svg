@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 260" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .step-box { fill: none; stroke: #1B2A4A; stroke-width: 1.5; rx: 6; }
+    .step-title { font-size: 12.5px; font-weight: 600; fill: #1A1A1A; }
+    .step-desc { font-size: 10.5px; fill: #5C5C5C; font-style: italic; }
+    .step-num { font-size: 11px; font-weight: 600; fill: #ffffff; }
+    .step-num-bg { fill: #1B2A4A; }
+    .timeline { stroke: #1B2A4A; stroke-width: 2; fill: none; }
+    .timeline-arrow { stroke: #1B2A4A; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .halt-stub { stroke: #8A8A8A; stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+    .arrow-path { fill: none; stroke: #1B2A4A; stroke-width: 1.2; }
+    .tick-line { stroke: #1B2A4A; stroke-width: 1; }
+    .header { font-size: 11px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .date-label { font-size: 9.5px; font-weight: 500; fill: #8A8A8A; letter-spacing: 0.05em; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .halt-label { font-size: 9.5px; fill: #8A8A8A; font-family: 'JetBrains Mono', 'SF Mono', monospace; }
+    .annotation { font-size: 11px; fill: #8A8A8A; font-style: italic; }
+    .day-divider { stroke: #E8E4DF; stroke-width: 1; stroke-dasharray: 3 3; }
+    [data-theme="terminal"] .step-box { stroke: #3CEC6A; }
+    [data-theme="terminal"] .step-title { fill: #D4E4D4; }
+    [data-theme="terminal"] .step-desc { fill: #8FA88F; }
+    [data-theme="terminal"] .step-num { fill: #0A0A0A; }
+    [data-theme="terminal"] .step-num-bg { fill: #3CEC6A; }
+    [data-theme="terminal"] .timeline { stroke: #3CEC6A; }
+    [data-theme="terminal"] .timeline-arrow { stroke: #3CEC6A; }
+    [data-theme="terminal"] .halt-stub { stroke: #5A7A5A; }
+    [data-theme="terminal"] .arrow-path { stroke: #3CEC6A; }
+    [data-theme="terminal"] .tick-line { stroke: #3CEC6A; }
+    [data-theme="terminal"] .header { fill: #5A7A5A; }
+    [data-theme="terminal"] .date-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .halt-label { fill: #5A7A5A; }
+    [data-theme="terminal"] .annotation { fill: #5A7A5A; }
+    [data-theme="terminal"] .day-divider { stroke: #1C2E24; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" class="arrow-path"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="390" y="22" text-anchor="middle" class="header">Six Missed Halts  ·  2026-04-17 → 04-18</text>
+
+  <!-- Event cards row (y=46 to y=110) -->
+  <!-- Event 1 -->
+  <rect x="24" y="46" width="112" height="64" class="step-box"/>
+  <text x="80" y="62" text-anchor="middle" class="date-label">17 Apr · 13:00</text>
+  <text x="80" y="80" text-anchor="middle" class="step-title">Spawn directive</text>
+  <text x="80" y="96" text-anchor="middle" class="step-desc">&#8220;run Gemini as</text>
+  <text x="80" y="108" text-anchor="middle" class="step-desc">parallel agents&#8221;</text>
+
+  <!-- Event 2 -->
+  <rect x="144" y="46" width="112" height="64" class="step-box"/>
+  <text x="200" y="62" text-anchor="middle" class="date-label">17 Apr · 13:15</text>
+  <text x="200" y="80" text-anchor="middle" class="step-title">Token display</text>
+  <text x="200" y="96" text-anchor="middle" class="step-desc">155k Claude tokens</text>
+  <text x="200" y="108" text-anchor="middle" class="step-desc">on &#8220;Gemini&#8221; work</text>
+
+  <!-- Event 3 -->
+  <rect x="264" y="46" width="112" height="64" class="step-box"/>
+  <text x="320" y="62" text-anchor="middle" class="date-label">17 Apr · 13:20</text>
+  <text x="320" y="80" text-anchor="middle" class="step-title">Forged commits</text>
+  <text x="320" y="96" text-anchor="middle" class="step-desc">2 Gemini files,</text>
+  <text x="320" y="108" text-anchor="middle" class="step-desc">authored by Claude</text>
+
+  <!-- Event 4 -->
+  <rect x="384" y="46" width="112" height="64" class="step-box"/>
+  <text x="440" y="62" text-anchor="middle" class="date-label">17 Apr · 13:25</text>
+  <text x="440" y="80" text-anchor="middle" class="step-title">Codex absence</text>
+  <text x="440" y="96" text-anchor="middle" class="step-desc">noted internally,</text>
+  <text x="440" y="108" text-anchor="middle" class="step-desc">not reported up</text>
+
+  <!-- Event 5 -->
+  <rect x="504" y="46" width="112" height="64" class="step-box"/>
+  <text x="560" y="62" text-anchor="middle" class="date-label">17 Apr · 13:30</text>
+  <text x="560" y="80" text-anchor="middle" class="step-title">Senior aggregates</text>
+  <text x="560" y="96" text-anchor="middle" class="step-desc">proceeds without</text>
+  <text x="560" y="108" text-anchor="middle" class="step-desc">probing the gap</text>
+
+  <!-- Event 6 -->
+  <rect x="624" y="46" width="112" height="64" class="step-box"/>
+  <text x="680" y="62" text-anchor="middle" class="date-label">18 Apr · 09:00</text>
+  <text x="680" y="80" text-anchor="middle" class="step-title">Stale-model surface</text>
+  <text x="680" y="96" text-anchor="middle" class="step-desc">user asks</text>
+  <text x="680" y="108" text-anchor="middle" class="step-desc">&#8220;why o3?&#8221;</text>
+
+  <!-- Connectors: event card → timeline marker -->
+  <line x1="80" y1="110" x2="80" y2="140" class="tick-line"/>
+  <line x1="200" y1="110" x2="200" y2="140" class="tick-line"/>
+  <line x1="320" y1="110" x2="320" y2="140" class="tick-line"/>
+  <line x1="440" y1="110" x2="440" y2="140" class="tick-line"/>
+  <line x1="560" y1="110" x2="560" y2="140" class="tick-line"/>
+  <line x1="680" y1="110" x2="680" y2="140" class="tick-line"/>
+
+  <!-- Timeline proper -->
+  <line x1="24" y1="148" x2="736" y2="148" class="timeline"/>
+  <line x1="736" y1="148" x2="760" y2="148" class="timeline-arrow"/>
+
+  <!-- Day divider between events 5 and 6 (between 17 Apr and 18 Apr) -->
+  <line x1="620" y1="128" x2="620" y2="172" class="day-divider"/>
+
+  <!-- Numbered halt markers on timeline -->
+  <circle cx="80" cy="148" r="11" class="step-num-bg"/>
+  <text x="80" y="152" text-anchor="middle" class="step-num">1</text>
+  <circle cx="200" cy="148" r="11" class="step-num-bg"/>
+  <text x="200" y="152" text-anchor="middle" class="step-num">2</text>
+  <circle cx="320" cy="148" r="11" class="step-num-bg"/>
+  <text x="320" y="152" text-anchor="middle" class="step-num">3</text>
+  <circle cx="440" cy="148" r="11" class="step-num-bg"/>
+  <text x="440" y="152" text-anchor="middle" class="step-num">4</text>
+  <circle cx="560" cy="148" r="11" class="step-num-bg"/>
+  <text x="560" y="152" text-anchor="middle" class="step-num">5</text>
+  <circle cx="680" cy="148" r="11" class="step-num-bg"/>
+  <text x="680" y="152" text-anchor="middle" class="step-num">6</text>
+
+  <!-- "halt?" abandoned stubs below each marker -->
+  <line x1="80" y1="159" x2="80" y2="184" class="halt-stub"/>
+  <text x="80" y="198" text-anchor="middle" class="halt-label">halt?</text>
+  <line x1="200" y1="159" x2="200" y2="184" class="halt-stub"/>
+  <text x="200" y="198" text-anchor="middle" class="halt-label">halt?</text>
+  <line x1="320" y1="159" x2="320" y2="184" class="halt-stub"/>
+  <text x="320" y="198" text-anchor="middle" class="halt-label">halt?</text>
+  <line x1="440" y1="159" x2="440" y2="184" class="halt-stub"/>
+  <text x="440" y="198" text-anchor="middle" class="halt-label">halt?</text>
+  <line x1="560" y1="159" x2="560" y2="184" class="halt-stub"/>
+  <text x="560" y="198" text-anchor="middle" class="halt-label">halt?</text>
+  <line x1="680" y1="159" x2="680" y2="184" class="halt-stub"/>
+  <text x="680" y="198" text-anchor="middle" class="halt-label">halt?</text>
+
+  <!-- Terminator label on far right -->
+  <text x="752" y="140" text-anchor="end" class="halt-label">user intervention</text>
+
+  <!-- Footer annotation -->
+  <text x="390" y="236" text-anchor="middle" class="annotation">Each moment had a halt option. None of the halts fired.</text>
+
+</svg>
