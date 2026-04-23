@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">
+  <style>
+    .tag-body { fill: #FAF8F5; }
+    .tag-strip { fill: #D8232A; }
+    .tag-border { fill: none; stroke: #1B2A4A; stroke-width: 1.5; }
+    .tag-separator { stroke: #1B2A4A; stroke-width: 1.5; }
+    .tag-shadow { fill: rgba(27, 42, 74, 0.08); }
+    .tag-hello { font-size: 22px; font-weight: 800; fill: #FFFFFF; letter-spacing: 0.18em; font-family: 'DM Sans', Arial, sans-serif; }
+    .tag-mynameis { font-size: 20px; font-style: italic; font-weight: 500; fill: #FFFFFF; font-family: 'DM Sans', Arial, sans-serif; }
+    .tag-name { font-size: 64px; font-weight: 800; fill: #1A1A1A; letter-spacing: 0.04em; }
+    .caption { font-size: 13px; fill: #8A8A8A; font-family: 'JetBrains Mono', 'SF Mono', monospace; font-style: italic; }
+    [data-theme="terminal"] .tag-body { fill: #0D1812; }
+    [data-theme="terminal"] .tag-strip { fill: #E8382E; }
+    [data-theme="terminal"] .tag-border { stroke: #3CEC6A; }
+    [data-theme="terminal"] .tag-separator { stroke: #3CEC6A; }
+    [data-theme="terminal"] .tag-shadow { fill: rgba(60, 236, 106, 0.08); }
+    [data-theme="terminal"] .tag-name { fill: #D4E4D4; }
+    [data-theme="terminal"] .caption { fill: #5A7A5A; }
+  </style>
+  <defs>
+    <clipPath id="tagClip">
+      <rect x="190" y="40" width="400" height="220" rx="6"/>
+    </clipPath>
+  </defs>
+
+  <g transform="rotate(-3 390 150)">
+    <!-- subtle shadow behind the tag -->
+    <rect x="196" y="48" width="400" height="220" rx="6" class="tag-shadow"/>
+
+    <!-- body fill -->
+    <rect x="190" y="40" width="400" height="220" rx="6" class="tag-body"/>
+
+    <!-- red strip, clipped so its bottom edge is square against the body -->
+    <rect x="190" y="40" width="400" height="68" class="tag-strip" clip-path="url(#tagClip)"/>
+
+    <!-- separator line between strip and body -->
+    <line x1="190" y1="108" x2="590" y2="108" class="tag-separator"/>
+
+    <!-- outer border -->
+    <rect x="190" y="40" width="400" height="220" rx="6" class="tag-border"/>
+
+    <!-- strip text -->
+    <text x="390" y="74" text-anchor="middle" class="tag-hello">HELLO</text>
+    <text x="390" y="98" text-anchor="middle" class="tag-mynameis">my name is</text>
+
+    <!-- name -->
+    <text x="390" y="210" text-anchor="middle" class="tag-name">GEMINI</text>
+  </g>
+
+  <!-- caption (not tilted) -->
+  <text x="390" y="320" text-anchor="middle" class="caption">actual model: claude-opus-4-7</text>
+</svg>
