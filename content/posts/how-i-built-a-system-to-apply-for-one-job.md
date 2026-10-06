@@ -6,7 +6,7 @@ tags: ["ai", "career", "claude", "systems"]
 draft: false
 ---
 
-My partner and I had four wedding celebrations — the last two back-to-back in Asia, ceremonies for family in different countries. Between the events, I had a lot of downtime in transit. Long drives, slow mornings, hours where the only thing to do was think.
+Over a long stretch of travel, I had a lot of downtime in transit. Long drives, slow mornings, hours where the only thing to do was think.
 
 So I thought about what I actually want to do with my career. Not the interview version. The real version. I spent a month using AI to pressure-test my own thinking, and by the time I came home I had exactly one target role I wanted to pursue.
 
